@@ -43,63 +43,123 @@
                 url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
             font-display: swap;
         }
-            * {
-                margin: 0;
-                padding: 0;
 
-                font-family: 'NexonLv1Gothic';
+        * {
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            font-family: 'NexonLv1Gothic';
 
-            }
-            body {
-                padding: 5%;
-            }
+        }
 
-            li {
-                list-style: none;
-            }
+        body {
+            padding: 5%;
+        }
 
-            h1 {
-                padding-bottom: 20px;
-            }
+        li {
+            list-style: none;
+        }
 
-            a {
-                text-decoration: none;
-                color: #333;
-            }
-            .list1 li {
-                display: inline;
-            }
+        h1 {
+            padding-bottom: 20px;
+            font-size: 50px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #E6E6E6;
+            border-width: 0px;
+            border-bottom-width: 1px;
+        }
+
+        .list1 li {
+            display: inline;
+        }
+
+        .list1 li a {
+            border: 1px solid #333;
+            padding:  8px 30px 5px 30px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 10px;
+
+        }
+
+        h2 {
+            margin-top: 30px;
+            background-color: #000;
+            color: #fff;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: 400;
+            padding:10px 3px 10px 3px;
+            font-size: 24px;
             
-            .list1 li a {
-                border: 1px solid #333;
-                padding: 10px 30px;
-                border-radius: 40px;
-                display: inline-block;
-                margin-bottom: 10px;
-
-            }
-
-            h2{
-                margin-top: 40;
-            }
+        }
     </style>
-
-
-
 </head>
 
 <body>
 
     <h1><a href="../index.html">javascript</a></h1>
-    
     <ul class="list1">
         <li><a href="javascript01.html">데이터 저장하기</a></li>
         <li><a href="javascript02.html">데이터 불러오기</a></li>
         <li><a href="javascript03.html">데이터 실행하기</a></li>
         <li><a href="javascript04.html"> 데이터 제어하기</a></li>
     </ul>
-    
+
+
     <h2>데이터 저장하기</h2>
+    <ul>
+
+        <li>01. 변수 : 데이터 저장</li>
+        <li>02. 변수 : 데이터 저장 + 데이터 변경 </li>
+        <li>03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가 </li>
+
+
+    </ul>
+
+    <hr>
+    <!-- Javascript -->
+    <script>
+        //sample01
+        //01. 변수 : 데이터 저장소
+        {
+            var x = 100; //변수 x에 숫자 100을 저장
+            var y = 200; //변수 Y에 숫자 200을 저장
+            var z = "javascript" //변수 Z에 숫자 jsvascipt을 저장
+
+            document.write("<br>*** 01. 변수 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br>");
+
+        }
+
+        //02. 변수 : 데이터 저장 + 데이터 변경
+        {
+            let x = 100;
+            let y = 200;
+            let z = "Javascript";
+            x=300;
+            y=400
+            z="jquery";
+
+            document.write("<br>*** 02. 변수 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br>");
+
+
+        }
+    </script>
 
 </body>
 
