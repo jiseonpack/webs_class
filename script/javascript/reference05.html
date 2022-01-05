@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reference</title>
+    <style>
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            font-family: 'NexonLv1Gothic';
+
+        }
+
+        body {
+            padding: 5%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+            font-size: 50px;
+            color: rgb(134, 52, 52);
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #E6E6E6;
+            border-width: 0px;
+            border-bottom-width: 1px;
+        }
+
+        .list1 li {
+            display: inline;
+        }
+
+        .list1 li a {
+            border: 1px solid #333;
+            padding: 8px 30px 5px 30px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .refer {
+
+            color: #fff;
+            background: #000;
+            padding: 2px 10px 2px 10px;
+            border-radius: 40px;
+
+
+        }
+
+        h2 {
+            margin-top: 30px;
+
+            color: rgb(134, 52, 52);
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: 540;
+            padding: 3px 10px 0px 10px;
+            font-size: 32px;
+        }
+
+        table,
+        tr,
+        td {
+            background: #f8b9b9;
+            border-collapse: collapse;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .lin {
+            border-right: 3px dotted #ffefef;
+        }
+
+        pre {
+            background: #fae7ea;
+            margin: 10px;
+            padding: 5px 10px 5px 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+
+    <h1>객체</h1>
+    <h2>객체란?</h2>
+    <p>javaScript는 객체기반의 스크립트 언어이며 JavaScript를 이루고 있는 거의 모든 것은 객체이다. 객체란 여러 속성을 하나의 변수에 저장할 수 있도록 해주는 데이터 타입으로 Key /
+        Value Pair를 저장할 수 있는 구조이다.
+        가령,TV에는 켜다,끄다,음을 소거하다,볼륨을 높히다,볼룸을 낮추다 등의 기능이 있습니다. 이렇듯 TV라는 객체에는 다양한 기능이 있습니다.
+        이러한 주변의 모든 사물들을 객체라고 부릅니다.
+    </p>
+    <table>
+        <tr>
+            <td class="lin">기본형</td>
+            <td>1. 객체 메서드( );<br>2. 객체.속성; 또는 3. 객체.속성=값;</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <p>TV를 예로 들어 메서드와 속성의 사용 방법에 대해 살펴보겠습니다. 만일 자바스크립트에서 TV의 기능(메서드)은 다음과 같이 사용해야 합니다
+    </p>
+    <pre><code>TV.켜다( ); 또는 TV. 끄다( );
+</code></pre>
+
+    <br><br>
+
+    <p>다음은 메서드를 잘못 사용한 경우입니다. '앞으로 전진해'라는 메서드는 자동차에나 있을 법한 기능 이겠죠.
+    </p>
+    <pre><code>TV.앞으로 전진해( );      (X)
+자동차.앞으로 전진해( ); (O)
+</code></pre>
+
+    <br><br>
+
+    <p>또한 자바스크립트에서 TV의 너비와 색상, 속성 정보를 알고 싶다면 다음과 같이 적용할 수 있습니다.
+    </p>
+    <pre><code>TV.width;(tv의 너비) 또는 TV.color; (tv의 색상)    //TV의 속성값을 가져옵니다. 
+TV.color=black;      //TV의 속성값을 바꿉니다.
+</code></pre>
+
+
+<br><br>
+
+<h2>객체의 종류</h2>
+<p>자바스크립트의 객체는 크게 내장 객체, 브라우저 객체 모델, 문서 객체 모델로 나눌 수 있습니다.</p>
+
+<br>
+
+<h3>내장객체</h3>
+<p>내장 객체는 자바스크립트 엔진에 내장되어 있어 필요한 경우에 생성해서 사용할 수 있습니다. 내장 객체로는 문자 (String),날짜(Date),배열(Array),수학(Math) 객체 등이 있습니다
+가령, 오늘 날짜를 알고싶다면 Dete 객체를 생성하여 오늘 날짜를 알려주는 메서드 getDate( )를 사용하면 됩니다. </p>
+
+<br>
+
+<h3>브라우저 객체 모델</h3>
+<p>브라우저 객체 모델(BOM)은 브라우저에 계층 구조로 내장되어 있는 객체를 말합니다. 브라우저 객체로는. 
+    window, screen, location, history, navigator 객체가 있습니다. 
+</p>
+
+<br>
+
+<h3>문서 객체 모델</h3>
+
+<p>문서 객체 모델(DOM)은 HTML 문서 구조를 말합니다. HTML 문서의 기본 구조는 최상위 객체로 &lt;html&gt;이 있으며, 그 하위 객체로는 &lt;head&gt;와 &lt;body&gt;가 있습니다. 
+    예를들어 자바스크립드를 이용해 이미지의 src 속성을 바꾸고 싶다면 지정된 &lt;img&gt;를 선택해 src 속성을 바꿔야 합니다. 이때 지정 요소를 제대로 선택해서 가져오려면 문서 객체의 구조를 잘 이해하고 있어야 합니다. 이렇게 문서 객체 모델에서는 HTML 의 모든 요소들을 문서 객체로 선택하여 자유롭게 속성을 바꿀 수 있고, 선택한 문서 객체에 원하는 스타일(css)을 적용할수도 있습니다. </p>
+
+</body>
+
+</html>
