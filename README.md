@@ -1,4 +1,4 @@
 # webs_class
 
-메인스크립트 정리
+메인페이지
 https://jiseonpack.github.io/webs_class/
