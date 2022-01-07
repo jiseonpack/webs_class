@@ -310,10 +310,10 @@
         {a: 100, b: 200},
         {c: "javascript"}
     ];
-    document.write("<br>*** 14. 객체 ***<br>");
-    document.write(obj [0].a,"<br>");
-    document.write(obj [0].b,"<br>");
-    document.write(obj [1].c,"<br>");
+    document.write("*** 14. 객체 ***");
+    document.write(obj [0].a,);
+    document.write(obj [0].b,);
+    document.write(obj [1].c,);
 }    
 </code></pre>
         </div>
@@ -324,12 +324,19 @@
         <h3>15. 객체 : 데이터를 저장 (키와 값) : 표현 방법6</h3>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-    const obj = { a:100, b:200, c:"javascript" }
-
-    document.write("*** 13. 객체 ***");
-    document.write(obj.a)
-    document.write(obj.b)
-    document.write(obj.c)
+    const obj = {
+        a: 100,
+        b: [200,300],
+        c:{x: 400, y:500},
+        d:"javascript"
+    }
+    document.write("*** 15. 객체 ***");
+    document.write(obj.a,)
+    document.write(obj.b[0],)
+    document.write(obj.b[1],)
+    document.write(obj.c.x,)
+    document.write(obj.c.y,)
+    document.write(obj.d,)
 }    
 </code></pre>
         </div>
@@ -340,12 +347,16 @@
         <h3>16. 객체 : 데이터를 저장 (키와 값) : 표현 방법7</h3>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-    const obj = { a:100, b:200, c:"javascript" }
+    const a = 100;
+    const b = 200;
+    const c = "javascript";
 
-    document.write("*** 13. 객체 ***");
-    document.write(obj.a)
-    document.write(obj.b)
-    document.write(obj.c)
+    const obj = { a, b, c }
+
+    document.write("*** 16. 객체 ***");
+    document.write(obj.a,);
+    document.write(obj.b,);
+    document.write(obj.c,);
 }    
 </code></pre>
         </div>
@@ -356,12 +367,31 @@
         <h3>17. 객체 : 데이터를 저장 (키와 값) : 표현 방법8</h3>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-    const obj = { a:100, b:200, c:"javascript" }
-
-    document.write("*** 13. 객체 ***");
-    document.write(obj.a)
-    document.write(obj.b)
-    document.write(obj.c)
+    const obj = {
+        a: 100,
+        b: [200, 300],
+        c: {x: 400, y: 500},
+        d: "javascript",
+        e: function(){
+            document.write("javascript가 실행되었습니다.");
+        },
+        f: function(){
+            document.write(obj.d + "가 실행되었습니다.")
+        },
+        g: function(){
+            document.write(this.d + "가 실행되었습니다.")
+        }
+    }
+    document.write("*** 17. 객체 ***");
+    document.write(obj.a,);
+    document.write(obj.b,);
+    document.write(obj.b[0],);
+    document.write(obj.b[1],);
+    document.write(obj.c.x,);
+    document.write(obj.c.y,);
+    obj.e();
+    obj.f();
+    obj.g();
 }    
 </code></pre>
         </div>
