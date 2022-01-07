@@ -40,7 +40,7 @@
     padding: 0;
     font-family: 'NexonLv1Gothic';
 }
-
+/* list */
 li {
     list-style: none;
 }
@@ -49,7 +49,22 @@ a {
     text-decoration: none;
     color: #000;
 }
-
+/* top */
+.top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+.top a{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    display: block;
+}
 /* header */
 #header {
     padding: 40px;
@@ -120,6 +135,31 @@ a {
             line-height: 1.6;
         }
     }
+    /* note */
+    .note {
+        padding: 40px 0;
+        border-bottom: 1px dotted #cdcdcd;
+    }
+    .note a {
+        font-size: 16px;
+        background: #000;
+        color: #fff;
+        border-radius: 20px;
+        padding: 7px 15px 5px 15px;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+    .note a:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 800px){
+        .note{
+            padding: 20px 0;
+        }
+        .note a {
+            font-size: 14px;
+        }
+    }
     /* script */
     .script {
         padding: 40px 0;
@@ -151,3 +191,6 @@ a {
             padding: 10px 15px 8px 15px;
         }
     }
+        .script .sample .code pre {
+            font-size: 14px;
+         }
