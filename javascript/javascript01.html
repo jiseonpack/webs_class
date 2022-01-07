@@ -541,31 +541,31 @@
 
          //17. 객체 : 데이터를 저장 (키와 값) : 표현 방법8 : 객체 속에 함수
          {
-                const obj = {
-                    a: 100,
-                    b: [200, 300],
-                    c: {x: 400, y: 500},
-                    d: "javascript",
-                    e: function(){
-                        document.write("javascript가 실행되었습니다.<br>");
-                    },
-                    f: function(){
-                        document.write(obj.d + "가 실행되었습니다.<br>")
-                    },
-                    g: function(){
-                        document.write(this.d + "가 실행되었습니다.<br>")
-                    }
+            const obj = {
+                a: 100,
+                b: [200, 300],
+                c: {x: 400, y: 500},
+                d: "javascript",
+                e: function(){
+                    document.write("javascript가 실행되었습니다.<br>");
+                },
+                f: function(){
+                    document.write(obj.d + "가 실행되었습니다.<br>")
+                },
+                g: function(){
+                    document.write(this.d + "가 실행되었습니다.<br>")
                 }
-                document.write("<br>*** 17. 객체 ***<br>");
-                document.write(obj.a, "<br>");
-                document.write(obj.b, "<br>");
-                document.write(obj.b[0], "<br>");
-                document.write(obj.b[1], "<br>");
-                document.write(obj.c.x, "<br>");
-                document.write(obj.c.y, "<br>");
-                obj.e();
-                obj.f();
-                obj.g();
+            }
+            document.write("<br>*** 17. 객체 ***<br>");
+            document.write(obj.a, "<br>");
+            document.write(obj.b, "<br>");
+            document.write(obj.b[0], "<br>");
+            document.write(obj.b[1], "<br>");
+            document.write(obj.c.x, "<br>");
+            document.write(obj.c.y, "<br>");
+            obj.e();
+            obj.f();
+            obj.g();
             }   
 
     </script>
