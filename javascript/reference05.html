@@ -77,11 +77,19 @@
 <pre><code>06:  &lt;script&gt;
 07:     var num1 = 15;
 08:     var num2 = 2;
-09:         document.write(+ i "&lt;br&gt;");
-10:     }
-11:     document.write("===the end===");
-12:&lt;/script&gt;
-*continue 문은 반복문 이후의 코드 시행을 건너뛰고 다시 반복문의 증감식을 수행합니다.</code></pre>
+09:     var result;
+10:     result = num1 + num2;
+11:     document.write(+ i "&lt;br&gt;"); //17
+12:     result = num1 - num2;
+13:     document.write(+ i "&lt;br&gt;"); //13
+14:     result = num1 * num2;
+15:     document.write(+ i "&lt;br&gt;"); //30
+16:     result = num1 / num2;
+17:     document.write(+ i "&lt;br&gt;"); //7.5
+18:     result = num1 % num2;
+19:     document.write(+ i "&lt;br&gt;"); //1
+20:&lt;/script&gt;
+</code></pre>
 </div>
 
         <h3>문자 결합 연산자</h3>
