@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Referrnce</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>박지선</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href ="css.html">CSS <em>기초문법</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/InLine</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li class="active"><a href="cssRefer04.html">CSS 색상</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+            <div class="refer">
+                <div class="doc">
+                    <h3>CSS 색상</h3>
+                    <p>CSS를 통해 색을 표현하는 방법입니다.</p>
+
+                    <h4>16진수 표기법</h4>
+                    <p>웹 문서에서 색상을 표현하는 방법은 16진수로 표현하는 방법입니다. 두자리씩 묶어서 #RRGGBB 형식으로 표현하며, RR은 빨간색, GG는 초록색, BB는 파란색의 양을 표현합니다. 각 색상의 하나도 섞이지 않았음은 00부터 가득 썩였음은 FF까지 사용할 수 있습니다.</p>
+                    
+                    <h4>RGB와 RGBA</h4>
+                    <p>웹 문서에서 색상을 표현하는 rgb(255,255,255)는 십진수를 이용하여 표현합니다. 색이 하나도 석이지 않았을 때에는 0으로 표시하고 가득섞였을 때에는 255로 표현합니다. 숫자는 색상의 양을 나타내고 a는 투명도(alpha)를 나태냅니다. 투명도는 0과 1사이 값으로 표현합니다.</p>
+                    <div class="code">
+<pre><code>rgb(red 값, green 값, blue 값);
+rgba(red 값, green 값, blue 값, alpha 값);</pre></code>
+</div>
+
+                    <h4>HSL와 HSLA</h4>
+                    <p>웹 문서에서 색상을 표현하는 HSL은 색상(hue), 채도(saturation), 밝기(lightness)를 나타냅니다. 색상은 둥글게 배치한 색상환으로 표시하고 0도와 360에는 빨간색, 120도에서는 초록색, 240도에서는 파란색이 배치됩니다. 채도가 0%이면 회색톤, 100%이면 순색으로 표시됩니다. 밝기는 0%에서는 가장 어둡고 100%에서는 가장 밝습니다.</p>
+                    <div class="code">
+<pre><code>hsl(hue 값, saturation 값, lightness 값);
+hsla(hue 값, saturation 값, lightness 값, alpha 값);</pre></code>
+</div>                
+                    <h4>색상 이름 표기법</h4>
+                    <p>색상 이름을 이용하여 색을 표현 할 수 있습니다. 가장 기본적인 16가지를 포함하여 216가지의 색상 이름 표기법이 있습니다.</p>
+                    <div class="code">
+<pre><code>aqua, black, blue, fnchsia, gray, green, lime, maroon,
+navy, olive, purple, red, silver, teal, white, yellow</pre></code>
+</div>
+                <h4>CSS 색상</h4>
+                <div class="table">
+                <table>
+                    <thead>
+                        <th>속성값</th>
+                        <th>설명</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>#RRGGBB</th>
+                            <td>빨강, 초록, 파랑의 색상을 16진법 두자리로 지정한 색상 표현 방법입니다. 각 요소별로 256단계로 표현합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>#RGB</th>
+                            <td>빨강, 초록, 파랑의 색상은 16진수 한자리로 지정한 색상 표현 방법입니다. 각 요소별 16단계로 표현합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>rgb(r,g,b)</th>
+                            <td>빨강, 초록, 파랑의 색상을 표현합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>rgba(r,g,b,a)</th>
+                            <td>빨강, 초록, 파랑의 색상과 투명도로 색상을 표현합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>hsl(h,s,l)</th>
+                            <td>색상, 채도, 명도로 색상을 표현합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>hsla(h,s,l,a)</th>
+                            <td>색상, 채도, 명도로 색상과 투명도로 색상을 표현합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>색상 이름</th>
+                            <td>미리 정의된 색상이름을 사용합니다.(red, blue...)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                    </div>
+                <!-- //refer -->
+            </main>
+
+            <!-- script -->
+            <script src="assets/js/prism.js"></script>
+        </body>
+        </html>
