@@ -310,7 +310,7 @@ a {
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    border:8px solid rgb(100, 184, 199);
+    border:8px solid #a3bde4;
     box-sizing: border-box;
     border-radius: 20px;
     position: relative;
@@ -320,7 +320,7 @@ a {
     content: '';
     width: 100%;
     height: calc(100vh - 16px);
-    border: 8px solid #a3bde4;
+    border: 8px solid #d2e4ff;
     box-sizing: border-box;
     position: absolute;
     left: 0; top: 0;
