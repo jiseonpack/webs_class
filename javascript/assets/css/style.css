@@ -329,7 +329,7 @@ a {
 }
 .javascript h1 {
     font-size: 8vw;
-    color: rgb(100, 184, 199);
+    color: #a3bde4;
     font-weight: 700;
 }
 .javascript .menu {
@@ -339,15 +339,15 @@ a {
     display: inline;
 }
 .javascript .menu li a {
-    border: 1px dashed rgb(100, 184, 199);
-    color: rgb(100, 184, 199);
+    border: 1px dashed #a3bde4;
+    color: #a3bde4;
     border-radius: 50px;
     padding: 10px 30px;
     display: inline-block;
     margin: 5px 0;
 }
 .javascript .menu li a:hover {
-    background: rgb(100, 184, 199);
+    background: #a3bde4;
     color: #fff;
 }
 
