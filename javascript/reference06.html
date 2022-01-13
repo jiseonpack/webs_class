@@ -156,7 +156,29 @@ document.write(num);
 </code></pre>
 </div>
         <p>중첩 if 문은 바깥쪽에 있는 조건문의 조건식1을 만족해야만 안쪽에 있는 조건문인 조건식2를 검사합니다. 만일 안쪽 if 문의 조건식2를 만족하지 않으면 바깥쪽 조건문인 조건식1의 중괄호 안에 있는 코드만 실행하고 종료됩니다.</p>
-        <p class="mt25">다음</p>
+        <p class="mt25">다음은 중첩 if 문을 사용해 아이디와 비밀번호가 일치했을 때 환영 문구가 출력되도록 작성한 예제입니다. 비밀번호가 일치하지 않을 경우에는 브라우저가 새로 고침이 되도록 했습니다.</p>
+        <div class="code">
+            <pre><code>06:  &lt;script&gt;
+07:     var id = "easy1004";    //아이디
+08:     var pw = "112233";      //비밀번호
+09:      
+10:     var user_id = prompt("아이디는?","");    //아이디 입력
+11:     var user_pw = prompt("비밀번호는?","");  //비밀번호 입력   
+12:      
+13:      if(id == user_id){     *아이디가 일치하면 실행됩니다.
+14:          if(id == user_pw) { 
+15:             document.write(user_id+"님 반갑습니다!");
+16:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
+17:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
+18:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
+19:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
+20:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
+21:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
+22:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
+23:     }
+24:&lt;/script&gt;
+</code></pre>
+</div>
     </main>
 </body>
 </html>
