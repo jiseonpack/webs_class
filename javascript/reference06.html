@@ -167,14 +167,14 @@ document.write(num);
 12:      
 13:      if(id == user_id){     *아이디가 일치하면 실행됩니다.
 14:          if(id == user_pw) { 
-15:             document.write(user_id+"님 반갑습니다!");
-16:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
-17:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
-18:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
-19:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
-20:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
-21:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
-22:      document.write("당신이 좋아하는 숫자는 홀수입니다.");
+15:             document.write(user_id+"님 반갑습니다!");   *비밀번호가 일치하면 실행됩니다.
+16:          } else {
+17:             alert("비밀번호가 일치하지 않습니다.");
+18:             location.reload();  *브라우저 새로 고침
+19:         }
+20:      } else {
+21:         alert("아이디가 일치하지 않습니다.");   *아이디가 일치하지 않으면 실행됩니다.
+22:         location.reload();
 23:     }
 24:&lt;/script&gt;
 </code></pre>
