@@ -144,7 +144,7 @@ while(조건식){
 }
 </code></pre>
 </div>
-            <p>다음은 for 문을 이용해 1부터 10까지 i가 2의 배수일 경우에만 continue 문을 실행하여 홀수만 출력하는 예제입니다. </p>
+            <p class="mt40">다음은 for 문을 이용해 1부터 10까지 i가 2의 배수일 경우에만 continue 문을 실행하여 홀수만 출력하는 예제입니다. </p>
             <div class="code">
                 <pre><code>06:  &lt;script&gt;
 07:     for(var i = 1; i&lt;= 10; i++){
@@ -154,27 +154,6 @@ while(조건식){
 11:     document.write("==== The End ====");
 12:&lt;/script&gt;
 </code></pre>
-</div>
-            <h3>중첩 for 문</h3>
-            <p>for 문 안에 for 문을 사용한 것을 중첩 for 문이라고 합니다. 중첩 for 문은 예를 들어 자바스크립트를 이용해 3행 5열의 표를 만든하고 할 때 1행씩 행이 만들어질 때마다 5개의 열을 만들어야 할 경우에 사용합니다.중첩 for 문의 기본형은 다음과 같습니다.</p>
-            <div class="code">
-<pre><code>for(초깃값; 조건식; 증감식){  //바깥쪽 for문
-    for(초깃값; 조건식; 증감식){  //안쪽 for문
-        자바스크립트 코드;
-  }
-}</code></pre>
-</div>
-            <p>다음은 중첩 for 문을 사용하여 '1행 1열'부터 '3열 2열' 까지 출력하는 예제입니다. 바깥쪽 for 문은 행만큼 증가하고, 안쪽 for 문은 열만큼 증가하면 됩니다.</p>
-            <div class="code">
-<pre><code>06:  &lt;script&gt;
-07:     for(var i = 1;i &lt;= 3; i++){
-08:         for(var k 1;k&lt;=2;k++){
-09:         document.write(i + 행 + k +"열","&lt;br&gt;");
-10:     }
-11:     document.write("&lt;br&gt;");
-12:    }
-13:&lt;/script&gt;
-*바깥쪽의 반복문이 1회 실행되면 안쪽의 반복문은 2회 실행됩니다.</code></pre>
 </div>
         </div>
     </main>
