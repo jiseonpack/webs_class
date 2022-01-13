@@ -320,7 +320,7 @@ a {
     content: '';
     width: 100%;
     height: calc(100vh - 16px);
-    border: 8px solid #0099ff;
+    border: 8px solid #00ccff;
     box-sizing: border-box;
     position: absolute;
     left: 0; top: 0;
