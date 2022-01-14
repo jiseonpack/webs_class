@@ -28,6 +28,9 @@
                 <li class="active"><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
+            <ul>
+                <li><a href="practice01.html">데이터 연습하기</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -56,7 +59,47 @@
         </ul>
     </div>
 
-    </main>
-</body>
+    <!-- //list -->
 
+    
+    <div class="note">
+        <a href="reference08.html">함수</a>
+    </div>
+</main>
+    <!-- //note -->
+
+
+    <script>
+        //01. 선언적 함수
+        {
+            function func(){
+                document.write("함수가 실행되었습니다.");
+            }
+            func();
+        }
+        //02. 익명 함수
+        {
+            const func = function(){
+                document.write("함수가 실행되었습니다.");
+            }
+            func();
+        }
+        //03. 매개변수 함수
+        {
+            function func(str){
+                document.write(str);
+            }
+            func("함수가 실행되었습니다.");
+        }
+        //04. 리턴값 함수
+        {
+            function func(){
+                const str = "함수가 실행되었습니다.";
+                return str;
+            }
+            document.write(func());
+        }
+    </script>
+    
+</body>
 </html>
