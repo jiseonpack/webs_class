@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout03-2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #E8F5E9;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #C8E6C9;
+        }
+        #nav {
+            width: 1200px;
+            display: flex;
+        }
+        #nav .left {
+            width: 400px;
+            height: 100px;
+            background-color: #8cd890;
+        }
+        #nav .center {
+            width: 400px;
+            height: 100px;
+            background-color: #629b65;
+        }
+        #nav .right {
+            width: 400px;
+            height: 100px;
+            background-color: #8cd890;
+        }
+        #contents {
+            width: 1200px;
+            display: flex;
+        }
+        #contents .content .article1 {
+            width: 300px;
+            height: 780px;
+            background-color: #81C784;
+            float: left;
+        }
+        #contents .content .article2 {
+            width: 600px;
+            float: left;
+        }
+        #contents .content .article3 {
+            width: 300px;
+            height: 780px;
+            background-color: #4CAF50;
+            float: left;
+        }
+        #contents .content .article4 {
+            width: 600px;
+            height: 390px;
+            background-color: #66BB6A;
+        }
+        #contents .content .article5 {
+            width: 600px;
+            height: 390px;
+            background-color: #459749;
+        }
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #388E3C;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </nav>
+        <section id="contents">
+            <section class="content">
+                <article class="article1"></article>
+                <article class="article2">
+                    <article class="article4"></article>
+                    <article class="article5"></article>
+                </article>
+                <article class="article3"></article>
+            </section>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

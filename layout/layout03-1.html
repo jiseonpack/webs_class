@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout03</title>
+    <title>Layout03-1</title>
     <style>
-        * {
+        *{
             margin: 0;
             padding: 0;
-        }
-        body {
-            background-color: #E1F5FE;
         }
         #wrap {
             width: 1200px;
@@ -24,35 +21,45 @@
         }
         #nav {
             width: 1200px;
+            display: flex;
+        }
+        #nav .left {
+            width: 600px;
             height: 100px;
             background-color: #81D4FA;
         }
+        #nav .right {
+            width: 600px;
+            height: 100px;
+            background-color: #84a9bb;
+        }
         #contents {
             width: 1200px;
-            display: flex;  
-        }
-        #contents .aside {
-            width: 400px;
-            height: 780px;
-            background-color: #4FC3F7;
-        }
-        #contents .content {
-            width: 800px;
+            display: flex;
         }
         #contents .content .article1 {
-            width: 800px;
-            height: 260px;
-            background-color: #039BE5;
+            width: 300px;
+            height: 520px;
+            background-color: #4FC3F7;
+            float: left
         }
         #contents .content .article2 {
-            width: 800px;
+            width: 900px;
             height: 260px;
-            background-color: #0288D1;
+            background-color: #039BE5;
+            float: left
         }
         #contents .content .article3 {
-            width: 800px;
+            width: 900px;
+            height: 260px;
+            background-color: #0288D1;
+            float: left
+        }
+        #contents .content .article4 {
+            width: 1200px;
             height: 260px;
             background-color: #0277BD;
+            float: left
         }
         #footer {
             width: 1200px;
@@ -64,17 +71,19 @@
 <body>
     <div id="wrap">
         <header id="header"></header>
-        <nav id="nav"></nav>
+        <nav id="nav">
+            <section class="left"></section>
+            <section class="right"></section>
+        </nav>
         <section id="contents">
-            <aside class="aside"></aside>
             <section class="content">
                 <article class="article1"></article>
                 <article class="article2"></article>
                 <article class="article3"></article>
+                <article class="article4"></article>
             </section>
-        </section>    
+        </section>
         <footer id="footer"></footer>
     </div>
-    
 </body>
 </html>
