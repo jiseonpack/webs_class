@@ -44,6 +44,11 @@
                 <li>02. 요소 메서드 : 선택자 : querySelectorAll() : 모든 요소 선택자</li>
                 <li>03. 요소 메서드 : 선택자 : document.getElementById() : 아이디 요소 선택자</li>
                 <li>04. 요소 메서드 : 선택자 : document.getElementByClassName() : 클래스 요소 선택자</li>
+                <br>
+                <li>01. 요소 메서드 : 클래스 : .classList.add() : 클래스 추가하기</li>
+                <li>02. 요소 메서드 : 클래스 : .classList.remove() : 클래스 삭제하기</li>
+                <li>03. 요소 메서드 : 클래스 : .classList.contains() : 클래스 존재여부 확인하기</li>
+                <li>04. 요소 메서드 : 클래스 : .classList.toggle() : 클래스 추가/삭제하기</li>
             </ul>
         </div>
         <!-- //list -->
@@ -51,10 +56,72 @@
             
         </div>
         <!-- //script -->
-    </main>
+         <!-- script sample -->
+         <div class="script">
+            <!-- sample1 -->
+            <div id="sample1" , class="sample">
+                <h3>01. 요소 메서드 : .classList.add(), .classList.remove()</h3>
+                <div class="view">
+                    <div class="view1"><img src="assets/img/img01.jpg" alt="이미지01"></div>
+                    <div class="view2"><img src="assets/img/img02.jpg" alt="이미지01"></div>
+                    <div class="view3"><img src="assets/img/img03.jpg" alt="이미지01"></div>
+                    <div class="view4"><img src="assets/img/img04.jpg" alt="이미지01"></div>
+                    <div class="view5"><img src="assets/img/img05.jpg" alt="이미지01"></div>
+                    <div class="view6"><img src="assets/img/img06.jpg" alt="이미지01"></div>
+                </div>
+                <div class="btn">
+                    <a href="#c" class="btn1">두번째 이미지를 클릭(selected)하면 선택됩니다.</a>
+                    <a href="#c" class="btn2">두번째 이미지를 클릭(selected)하면 해제됩니다.</a>
+                    <a href="#c" class="btn3">이 버튼을 클릭(selected)하면 모든 이미지가 선택됩니다.</a>
+                    <a href="#c" class="btn4">이 버튼을 클릭(selected)하면 모든 이미지가 선택됩니다.</a>
+                </div>
+                <div class="code">
+                <pre class="line-numbers"><code class="language-js">{   //두번째 이미지 선택
+    document.querySelector("#sample1 .btn1").addEventListener("click", function(){
+        document.querySelector("#sample1 .view2").classList.add("selected");
+    });
+    document.querySelector("#sample1 .btn2").addEventListener("click", function(){
+        document.querySelector("#sample1 .view2").classList.remove("selected");
+    });
+
+    //모든 이미지 선택 forEach 
+    document.querySelector("#sample1 .btn3").addEventListener("click", function(){
+        document.querySelectorAll("#sample1 .view > div").forEach(function(el){
+            el.classList.add("selected");
+        });
+    });    
+    document.querySelector("#sample1 .btn4").addEventListener("click", function(){
+        document.querySelectorAll("#sample1 .view > div").forEach(function(el){
+            el.classList.remove("selected");
+        });
+    });    
+}</pre></code>
+            </div>
+            </div>
+            <!-- //sample1 -->
+        </div>
     <!-- script -->
+</main>
     <script>
-        
+        //두번째 이미지 선택
+        document.querySelector("#sample1 .btn1").addEventListener("click", function(){
+            document.querySelector("#sample1 .view2").classList.add("selected");
+        });
+        document.querySelector("#sample1 .btn2").addEventListener("click", function(){
+            document.querySelector("#sample1 .view2").classList.remove("selected");
+        });
+
+        //모든 이미지 선택 forEach 
+        document.querySelector("#sample1 .btn3").addEventListener("click", function(){
+            document.querySelectorAll("#sample1 .view > div").forEach(function(el){
+                el.classList.add("selected");
+            });
+        });    
+        document.querySelector("#sample1 .btn4").addEventListener("click", function(){
+            document.querySelectorAll("#sample1 .view > div").forEach(function(el){
+                el.classList.remove("selected");
+            });
+        });    
     </script>
 </body>
 </html>
