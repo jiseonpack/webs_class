@@ -39,10 +39,19 @@
             <h3>1-2. while문을 이용해서 구구단 출력</h3>
 
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-                        
+                <pre class="line-numbers"><code class="language-js">{let num =2; 
+    let num1 =1;
     
-    }</code></pre>
+    while(num &lt;= 9){
+        document.write("&lt;br&gt;");
+        while(num1 &lt;= 9){
+            document.write(num + " * " + num1 + " = " + num*num1, "&lt;br&gt;");
+            num1++;
+        } 
+        num1= 1;   
+        num++;
+    }
+}</code></pre>
     </div>
             <!-- //02 -->
 
@@ -80,8 +89,7 @@
         // i = for(let i=2; i<=9; i++)
         // j = for(let j=1; j<=9; j++)
 
-        //sum = i * j
-
+         
          for( let i=2; i<=9; i++){
             document.write("<br>");
 
@@ -93,19 +101,20 @@
 
          //while문을 이용해서 구구단 출력
          {
+             
             let num =2; 
             let num1 =1;
             
             while(num <= 9){
-                document.write(num);
+                document.write("<br>");
+                while(num1 <= 9){
+                    document.write(num + " * " + num1 + " = " + num*num1, "<br>");
+                    num1++;
+                } 
+                num1= 1;   
                 num++;
-            }    
-            while(num1 <= 9){
-                document.write(num1);
-            }    
-            
-            
-         }
+            }
+        }
     </script>
 </body>
 </html>
