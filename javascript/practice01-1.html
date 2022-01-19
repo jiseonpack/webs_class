@@ -68,12 +68,20 @@
         }
     }
 
-    //다른 방법1
+    //다른 방법 짝수1
     for( let i=1; i&lt;=100; i++ ){
         if( i % 2 == 0 ) console.log(i);
     }
-    //다른 방법2
+    //다른 방법 짝수2
     for( let i=2; i&lt;=100; i+=2 ){
+        console.log(i);
+    }
+    //다른 방법 홀수1
+    for( let i=1; i&lt;=100; i++ ){
+        if( i % 2 != 0 ) console.log(i);
+    }
+    //다른 방법 홀수2
+    for( let i=1; i&lt;=100; i+=2 ){
         console.log(i);
     }
 }
@@ -85,7 +93,7 @@
     </main>
     <script>
         {
-            //짝수
+            짝수
             for( let i=1; i<=100; i++){
                 if( i % 2 == 0){
                     console.log(i);
@@ -97,6 +105,7 @@
                     console.log(i);
                 }
             }
+    
         }
     </script>
 </body>
