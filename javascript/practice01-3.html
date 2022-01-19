@@ -10,6 +10,9 @@
      <link rel="stylesheet" href="assets/css/style.css">
      <link rel="stylesheet" href="assets/css/prism2.css">
     
+    <!-- script -->
+    <script src="assets/js/prism2.js"></script>
+
      <style>
          table {
             border-collapse: collapse;
@@ -30,38 +33,38 @@
     <!-- 01 -->
     <main id="main">
         <div class="test">
+            <!-- 01 -->
             <h2>1. 테이블 출력하기</h2>
-            <h3>1-1. for문을 이용해서 테이블을 출력하시오!<h3>
-
+            <h3>1-1.  for문을 이용해서 테이블을 출력하시오!</h3>
             <div class="code">
-            <pre class="line-numbers"><code class="language-js">&lt;script&gt;
-    let table = "&lt;table border='1'&gt;";
-
-    for( let i=1; i&lt;=5; i++){
-        table += "&lt;tr>";
-            for( let j=1; j&lt;=5; j++){
-                table +="&lt;td&gt;1&lt;/td&gt;";
-            }
-        table += "&lt;/tr&gt;";    
-    }
-        
-    table += "&lt;/table&gt;";
-
-    document.write(table);
-&lt;/script&gt;
+<pre class="line-numbers"><code class="language-js">{
+    &lt;script&gt;
+        let table = "&lt;table border='1'&gt;";
+    
+        for( let i=1; i&lt;=5; i++){
+            table += "&lt;tr&gt;";
+                for( let j=1; j&lt;=5; j++){
+                    table +="&lt;td&gt;1&lt;/td&gt;";
+                }
+            table += "&lt;/tr&gt;";    
+        }
+            
+        table += "&lt;/table&gt;";
+    
+        document.write(table);
+    &lt;/script&gt;
+}
 </code></pre>
-</div>
+            </div>
     <div class="result01"></div>
     <!-- //01 -->
 
-    <!-- 02 -->
-    <main id="main">
-        <div class="test">
-            <h2>1.2 for문을 이용해서 테이블 출력하기</h2>
-            <h3>조건: 1~25 출력하기<h3>
-
-            <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
+     <!-- 02 -->
+     <h2>1.2 for문을 이용해서 테이블 출력하기</h2>
+     <h3>조건: 1~25 출력하기</h3>
+     <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    
     let num = 1;
     let table = "&lt;table&gt;";
         
@@ -74,14 +77,13 @@
         table +="&lt;/tr&gt;";
     }         
     table +="&lt;/table&gt;"
-}</code></pre>
-</div>
-    <div class="result02"></div>
-    <!-- //02 -->
+}
+</code></pre>
+     </div>
+<div class="result02"></div>
+<!-- //02 -->
 
-    <!-- script -->
-<script src="assets/js/prism2.js"></script>
-
+</main>
     <!-- <table border="1">
         <tr>
             <td>1</td>
@@ -119,7 +121,7 @@
             <td>5</td>
         </tr>
     </table> -->
-</main>
+
     
     <!-- script -->
     <script>
