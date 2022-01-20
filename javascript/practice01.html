@@ -35,6 +35,10 @@
 }
 </code></pre>
             </div>
+            <div class="result result01">
+                <h4>결과보기</h4>
+                <div class="result01"></div> 
+            </div>           
             <!-- //01 -->
 
             <!-- 02 -->
@@ -47,6 +51,10 @@
 }   
 </code></pre>
             </div>
+            <div class="result result02">
+                <h4>결과보기</h4>
+                <div class="result02"></div> 
+            </div>  
             <!-- //02 -->
 
             <!-- 03 -->
@@ -55,7 +63,7 @@
             <p>조건2. 홀수만 출력하세요!</p>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    //짝수
+    짝수
     for( let i=1; i&lt;=100; i++ ){
         if( i % 2 == 0 ){
             console.log(i);
@@ -72,42 +80,54 @@
     for( let i=1; i&lt;=100; i++ ){
         if( i % 2 == 0 ) console.log(i);
     }
-    //다른 방법 짝수2
-    for( let i=2; i&lt;=100; i+=2 ){
-        console.log(i);
-    }
     //다른 방법 홀수1
     for( let i=1; i&lt;=100; i++ ){
         if( i % 2 != 0 ) console.log(i);
     }
-    //다른 방법 홀수2
-    for( let i=1; i&lt;=100; i+=2 ){
-        console.log(i);
-    }
-}
 </code></pre>
             </div>
+            <div class="result result03">
+                <h4>결과보기</h4>
+                <div class="result03"></div> 
+            </div>  
             <!-- //03 -->
 
         </div>
     </main>
     <script>
+        //while문을 이용해서 1부터 100가지 출력
+        {
+            let num = 1;
+
+            while(num <= 100 ){
+                document.querySelector(".result .result01").innerHTML += num+" ";
+                num++;
+            }  
+        }
+
+        //for
+        {
+            for(let i=1; i<=100; i++){
+                document.querySelector(".result .result02").innerHTML += i+" ";
+            }
+        }         
+
         {
             // 짝수
             for( let i=1; i<=100; i++){
                 if( i % 2 == 0){
-                    console.log(i);
+                    document.querySelector(".result .result03").innerHTML += i+" ";
                 }
             }    
             
-            홀수
+            //홀수
             for( let i=1; i<=100; i++){
                 if( i % 2 != 0){
-                    console.log(i);
+                    document.querySelector(".result .result04").innerHTML += i+" ";
                 }
             }
         }
-        
     </script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
