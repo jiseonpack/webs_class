@@ -32,7 +32,15 @@
                 <li><a href="javascript11.html">이벤트 객체</a></li>
             </ul>
             <ul>
-                <li><a href="practice01.html">데이터 연습하기</a></li>
+                <li><a href="practice.html">데이터 연습하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="sample.html">필수 예제</a></li>
+                <li><a href="plugin.html">플러그인</a></li>
+                <li><a href="effect/mouseEffect.html">마우스 이펙트</a></li>
+                <li><a href="effect/parallaxEffect.html">패랠랙스 이펙트</a></li>
+                <li><a href="effect/slideEffect.html">슬라이드 이펙트</a></li>
+                <li><a href="effect/gameEffect.html">게임 이펙트</a></li>
             </ul>
         </nav>
     </header>
@@ -137,18 +145,23 @@
         }
 
         //02 confirm()
-        {
+        {   
             const btn = document.querySelector("#sample2 .btn1");
 
             btn.addEventListener("click", () => {
                 const conf = confirm("오늘 공부할 준비가 되었나요?");
 
-                document.querySelector("#sample2 .view").innerText = conf;
-            });
+                // document.querySelector("#sample2 .view").innerText = conf;
 
+                if(conf){
+                    document.querySelector("#sample2 .view").innerText="네 준비되었습니다.";
+                }else {
+                    document.querySelector("#sample2 .view").innerText="아직 준비 안되었습니다.";
+                }
+            });
+        }
             //만약에 true이면 -> 네 준비되었습니다.
             //만약에 false이면 -> 아직 준비 안되었습니다.
-        }
 
         //03 prompt()
         {
