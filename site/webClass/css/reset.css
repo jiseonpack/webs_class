@@ -76,19 +76,10 @@ em {
 }
 
 /* 폰트 셋팅 */
-body,
-button,
-input,
-select,
-table,
-textarea {
-    color: #222;
-    font-family: NexonLv1GothicLow, 'Margun Gothic', '맑은 고딕', dotum, 돋움;
-}
-.NexonLv1 {font-family: 'NexonLv1GothicLow';}
-.NexonLv1-300 {font-family: 'NexonLv1GothicLow'; font-weight: 300;}
-.NexonLv1-400 {font-family: 'NexonLv1GothicLow'; font-weight: 400;}
-.NexonLv1-700 {font-family: 'NexonLv1GothicLow'; font-weight: 700;}
+.NexonLv1 {font-family: 'NexonLv1Gothic';}
+.NexonLv1-300 {font-family: 'NexonLv1Gothic'; font-weight: 300;}
+.NexonLv1-400 {font-family: 'NexonLv1Gothic'; font-weight: 400;}
+.NexonLv1-700 {font-family: 'NexonLv1Gothic'; font-weight: 700;}
 .NexonLv2 {font-family: 'NexonLv2Gothic';}
 .NexonLv2-300 {font-family: 'NexonLv2Gothic'; font-weight: 300;}
 .NexonLv2-400 {font-family: 'NexonLv2Gothic'; font-weight: 400;}

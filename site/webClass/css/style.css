@@ -8,7 +8,7 @@
     3. 가상의 영역(clearfix) 속성을 설정     
 */
 #header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
     padding: 10px;
     min-width: 1200px;
     white-space: nowrap;
@@ -16,8 +16,7 @@
 #header .logo {
     float: left;
     width: 20%;
-    text-align: left;
-    padding: 8px 20px;
+    padding: 12px 20px;
 }
 #header .logo a {
     font-size: 30px;
@@ -38,6 +37,7 @@
     display: inline-block;
     padding: 20px 30px;
     font-size: 18px;
+    margin: 0 20px;
 }
 #header .member {
     float: right;
