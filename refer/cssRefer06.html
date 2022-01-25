@@ -43,84 +43,25 @@
         <div class="refer">
             <div class="doc">
                 <h3>float</h3>
-                <p>CSS 속성(property) float 은 한 요소(element)가 보통 흐름(normal flow)으로부터 빠져 텍스트 및 인라인(inline) 요소가 그 주위를 감싸는 자기 컨테이너의 좌우측을 따라 배치되어야 함을 지정합니다.
-                    <br><br>float 은 블록 레이아웃의 사용을 뜻하기 때문에, 일부 경우에 display 값의 계산값을 수정합니다.</p>
-                    <div class="table">
-                        <table>
-                            <thead>
-                                <th>지정값</th>
-                                <th>계산값</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>inline</th>
-                                    <td>block</td>
-                                </tr>
-                                <tr>
-                                    <th>inline-block</th>
-                                    <td>block</td>
-                                </tr>
-                                <tr>
-                                    <th>inline-table</th>
-                                    <td>table</td>
-                                </tr>
-                                <tr>
-                                    <th>table-row</th>
-                                    <td>block</td>
-                                </tr>
-                                <tr>
-                                    <th>table-row-group</th>
-                                    <td>block</td>
-                                </tr>
-                                <tr>
-                                    <th>table-column</th>
-                                    <td>block</td>
-                                </tr>
-                                <tr>
-                                    <th>table-column-group</th>
-                                    <td>block</td>
-                                </tr>
-                                <tr>
-                                    <th>table-cell</th>
-                                    <td>block</td>
-                                </tr>
-                                <tr>
-                                    <th>table-caption</th>
-                                    <td>block</td>
-                                </tr>
-                                <tr>
-                                    <th>table-header-group</th>
-                                    <td>block</td>
-                                </tr>
-                                <tr>
-                                    <th>table-footer-group</th>
-                                    <td>block</td>
-                                </tr>
-                                <tr>
-                                    <th>flex</th>
-                                    <td>flex, 다만 float 은 이러한 요소에 효과가 없음</td>
-                                </tr>
-                                <tr>
-                                    <th>inline-flex</th>
-                                    <td>inline-flex, 다만 float 은 이러한 요소에 효과가 없음</td>
-                                </tr>
-                                <tr>
-                                    <th>그외</th>
-                                    <td>변화없음</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h4>값</h4>
-                        <ul>
-                            <li>left : 요소가 자신의 포함(containing) 블록의 좌측에 부동(float, 떠움직여)해야 함을 나타내는 키워드입니다.</li>
-                            <li>right : 요소가 자신의 포함 블록의 우측에 부동해야 함을 나타내는 키워드입니다.</li>
-                            <li>none : 요소가 부동하지 않아야 함을 나타내는 키워드입니다.</li>
-                            <li>inline-start : 요소가 자신의 포함 블록의 시작쪽에 부동해야 함을 나타내는 키워드입니다. 즉, ltr(left to right) 스크립트 상에서 왼쪽 그리고 rtl(right to left) 스크립트 상에서는 오른쪽.</li>
-                            <li>inline-end : 요소가 자신의 포함 블록의 끝쪽에 부동해야 함을 나타내는 키워드입니다. 즉, ltr 스크립트 상에서 오른쪽 그리고 rtl 스크립트 상에서는 왼쪽.</li>
-                        </ul>
-    
-                    </div>
-                <div>
+                <p>float 라는 단어는 원래 ‘뜨다’ 라는 의미이며, 원래 웹페이지에서 이미지를 어떻게 띄워서 텍스트와 함께 배치할 것인가에 대한 속성입니다.</p>
+                <h4>값</h4>
+                    <ul>
+                        <li>inherit : 부모 요소에서 상속</li>
+                        <li>left : 왼쪽에 부유하는 블록 박스를 생성. 페이지 내용은 박스 오른쪽에 위치하며 위에서 아래로 흐름.</li>
+                        <li>right : 오른쪽에 부유하는 블록 박스를 생성. 페이지 내용은 박스 왼쪽에 위치하며 위에서 아래로 흐름. 이후 요소에 clear 속성이 있으면 페이지 흐름이 달라짐. none 이 아니라면 display 속성은 무시된다.</li>
+                        <li>none : 요소를 부유시키지 않음.</li>
+                    </ul>
+
+                <h4>사용법</h4> 
+                <p>.content > img {float: left;}</p> 
+                
+                <h4>예제</h4>
+                    <img src="assets/img/float.JPG" alt="예제">
+
+                <h4>출력 결과</h4>
+                    <img src="assets/img/float1.JPG" alt="결과">
+            </div>
+        <div>
                 <!-- //refer -->
     </main>
     <!-- script -->
