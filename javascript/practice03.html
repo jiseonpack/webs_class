@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practive03</title>
+    <title>테이블 출력하기</title>
 
      <!-- style -->
      <link rel="stylesheet" href="assets/css/style.css">
      <link rel="stylesheet" href="assets/css/prism2.css">
     
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/javascript.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/javascript.png">
+    <link rel="icon" href="../assets/face/javascript.png" sizes="128x128">
+
     <!-- script -->
     <script src="assets/js/prism2.js"></script>
 
@@ -34,25 +39,22 @@
     <main id="main">
         <div class="test">
             <!-- 01 -->
-            <h2>1. 테이블 출력하기</h2>
-            <h3>1-1.  for문을 이용해서 테이블을 출력하시오!</h3>
+            <h2>3. 테이블 출력하기</h2>
+            <h3>3-1.  for문을 이용해서 테이블을 출력하시오!</h3>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    &lt;script&gt;
-        let table = "&lt;table&gt;";
-    
-        for( let i=1; i&lt;=5; i++){
-            table += "&lt;tr&gt;";
-                for( let j=1; j&lt;=5; j++){
-                    table +="&lt;td&gt;1&lt;/td&gt;";
-                }
-            table += "&lt;/tr&gt;";    
-        }
-            
-        table += "&lt;/table&gt;";
-    
-        document.write(table);
-    &lt;/script&gt;
+    let table = "&lt;table&gt;";
+
+    for( let i=1; i&lt;=5; i++){
+        table += "&lt;tr&gt;";
+            for( let j=1; j&lt;=5; j++){
+                table +="&lt;td&gt;1&lt;/td&gt;";
+            }
+        table += "&lt;/tr&gt;";    
+    }
+    table += "&lt;/table&gt;";
+
+    document.write(table);
 }
 </code></pre>
             </div>
@@ -60,26 +62,26 @@
     <!-- //01 -->
 
      <!-- 02 -->
-     <h2>1.2 for문을 이용해서 테이블 출력하기</h2>
-     <h3>조건: 1~25 출력하기</h3>
+     <h3>3-2. for문을 이용해서 테이블 출력하기</h3>
+     <h4>조건: 1~25 출력하기</h4>
      <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    
-    let table = "&lt;table&gt;";
+        <pre class="line-numbers"><code class="language-js">{
     let num = 1;
-        
-    for( let i=1; i&lt;=5; i++){   
+    let table = "&lt;table&gt;";
+
+    for( let i=1; i&lt;=5; i++ ){
         table += "&lt;tr&gt;";
-            for(let j=1; j&lt;=5; j++ ){
-                table +="&lt;td&gt;"+ num + "&lt;/td&gt;";
+            for( let j=1; j&lt;=5; j++){
+                table += "&lt;td&gt;" + num + "&lt;/td&gt;";
                 num++;
-        }    
-        table +="&lt;/tr&gt;";
-    }         
-    table +="&lt;/table&gt;"
-}
-</code></pre>
-     </div>
+            }
+        table += "&lt;/tr&gt;";
+    }
+    table += "&lt;/table&gt;";
+
+    document.write(table);
+}</code></pre>
+            </div>
 <div class="result02"></div>
 <!-- //02 -->
 
