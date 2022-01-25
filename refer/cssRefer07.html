@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -6,462 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML/CSS 레퍼런스북</title>
+    <title>CSS Referrnce</title>
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../assets/face/css.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
     <link rel="icon" href="../assets/face/css.png" sizes="128x128">
 
-    <style>
-        @font-face {
-            font-family: 'Cafe24Syongsyong';
-            font-weight: normal;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Syongsyong/Cafe24Syongsyong.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Syongsyong/Cafe24Syongsyong.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Syongsyong/Cafe24Syongsyong.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Syongsyong/Cafe24Syongsyong.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Syongsyong/Cafe24Syongsyong.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'Jalnan';
-            font-weight: normal;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'Cafe24SsurroundAir';
-            font-weight: normal;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        body {
-            background: #ffdbe5;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        #wrap {
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .sea {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 30vh;
-            background: linear-gradient(to bottom, #FCC3CA 10%, #DFC8FA);
-            z-index: 10;
-        }
-
-        .text {
-            position: absolute;
-            left: 50%;
-            top: 40%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 30;
-        }
-
-        .text h1 a {
-            font-family: 'Cafe24Syongsyong';
-            font-size: 10vw;
-            line-height: 1.2;
-            color: #EB6567;
-            font-weight: normal;
-            font-style: italic;
-            position: relative;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .text h2 a {
-            font-family: 'Cafe24Syongsyong';
-            font-size: 80px;
-            color: #fff;
-            position: relative;
-            display: inline-block;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: all 0.3s;
-        }
-
-        .text h2 a:hover {
-            color: #EB6567;
-        }
-
-        .text h1 strong {
-
-            color: #F56365;
-        }
-
-        .text h1 em {
-            font-style: normal;
-            color: #fff;
-            -webkit-text-stroke: 2px #6C4C4D;
-        }
-
-        .text .subTitle {
-            font-family: 'Cafe24SsurroundAir';
-            background: #eb6567;
-            color: #fff;
-            border-radius: 50px;
-            padding: 14px 60px 10px 60px;
-            display: inline-block;
-            margin-bottom: 30px;
-            font-size: 30px;
-            box-shadow: 3px 5px 0 #6C4C4D;
-            position: relative;
-        }
-
-        .text .subTitle::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #6C4C4D;
-            position: absolute;
-            left: 30px;
-            top: 50%;
-            margin-top: -5px;
-        }
-
-        .text .subTitle::after {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #6C4C4D;
-            position: absolute;
-            right: 30px;
-            top: 50%;
-            margin-top: -5px;
-        }
-
-        .love {
-            width: 300px;
-            position: absolute;
-            left: 50%;
-            bottom: -30px;
-            transform: translateX(-50%);
-            z-index: 20;
-        }
-
-        .love::after {
-            content: "오늘 공부할까?";
-            position: absolute;
-            right: -7vw;
-            top: 0;
-            font-family: 'Cafe24Syongsyong';
-            color: #F56365;
-            font-size: 30px;
-            transform: rotate(10deg);
-        }
-
-        .ship {
-            width: 300px;
-            position: absolute;
-            left: 0;
-            bottom: 10vh;
-            z-index: 17;
-            animation-name: move;
-            animation-duration: 30s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes move {
-            0% {
-                left: -10%;
-            }
-
-            100% {
-                left: 110%;
-            }
-        }
-
-        .ship2 {
-            width: 150px;
-            position: absolute;
-            right: 10vw;
-            bottom: 25vh;
-            z-index: 15;
-            animation: moveship 5s infinite linear;
-        }
-
-        @keyframes moveship {
-            0% {
-                right: 10vw
-            }
-
-            50% {
-                right: 13vw
-            }
-
-            100% {
-                right: 10vw
-            }
-        }
-
-        .duck1 {
-            width: 30px;
-            position: absolute;
-            right: 10vw;
-            bottom: 20vh;
-            z-index: 15;
-            animation: moveduck1 30s infinite linear;
-        }
-
-        @keyframes moveduck1 {
-            0% {
-                right: -10vw
-            }
-
-            100% {
-                right: 110vw
-            }
-        }
-
-        .duck2 {
-            width: 20px;
-            position: absolute;
-            right: 8vw;
-            bottom: 19vh;
-            z-index: 15;
-            animation: moveduck2 30s infinite linear;
-        }
-
-        @keyframes moveduck2 {
-            0% {
-                right: -10vw
-}
-
-            100% {
-                right: 108vw
-            }
-        }
-
-        .balloon {
-            width: 50px;
-            position: absolute;
-            left: 20vw;
-            top: 10vw;
-            animation: moveball0on 5s infinite linear;
-        }
-
-        @keyframes moveball0on {
-            0% {
-                top: 10vh
-            }
-
-            50% {
-                top: 12vh
-            }
-
-            100% {
-                top: 10vh
-            }
-        }
-
-        .cloud1 {
-            width: 100px;
-            position: absolute;
-            left: 10vw;
-            top: 5vh;
-        }
-
-        .cloud2 {
-            width: 50px;
-            position: absolute;
-            left: 40vw;
-            top: 10vh;
-            animation: move2 200s infinite linear;
-        }
-
-        @keyframes move2 {
-            0% {
-                left: 40vw
-            }
-
-            50% {
-                left: 70vw
-            }
-
-            100% {
-                left: 40vw
-            }
-        }
-
-        .cloud3 {
-            width: 120px;
-            position: absolute;
-            right: 10vw;
-            top: 15vh;
-            transform: rotateY(180deg);
-            animation: move1 100s infinite linear;
-        }
-
-        @keyframes move1 {
-            0% {
-                right: -10vw
-            }
-
-            100% {
-                right: 110vw
-            }
-
-        }
-
-        .hearts>.particle {
-            opacity: 0;
-            position: absolute;
-            background-color: #cc2a5d;
-            animation: hearts 3s ease-in infinite;
-        }
-
-        .hearts>.particle:before,
-        .hearts>.particle:after {
-            position: absolute;
-            content: "";
-            border-radius: 100px;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            background-color: #cc2a5d;
-        }
-
-        .hearts>.particle:before {
-            transform: translateX(-50%);
-        }
-
-        .hearts>.particle:after {
-            transform: translateY(-50%);
-        }
-
-        @keyframes hearts {
-            0% {
-                opacity: 0;
-                transform: translate(0, 0%) rotate(45deg);
-            }
-
-            20% {
-                opacity: 0.6;
-                transform: translate(0, -20%) rotate(45deg);
-            }
-
-            100% {
-                opacity: 0;
-                transform: translate(0, -1000%) rotate(45deg);
-            }
-        }
-        @media (max-width:800px) {
-            .text .subTitle {
-                font-size: 16px;
-            }
-
-            .text h2 a {
-                font-size: 40px;
-            }
-
-            .text h1 a {
-                white-space: nowrap;
-                font-size: 70px;
-            }
-
-            .cloud1, .ship2 {
-                display: none;
-            }
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="sea"></div>
-        <div class="text hearts">
-            <span class="subTitle">HTML/ CSS</span>
-            <h1><a href="../index.html">레퍼런스 북</a></h1>
-            <h2>
-                <a href="html.html">HTML</a>
-                <a href="css.html">CSS</a>
-            </h2>
-        </div>
-        <div class="ship">
-            <img src="img/ship.png" alt="배">
-        </div>
-        <div class="love">
-            <img src="img/love.png" alt="사람">
-        </div>
-        <div class="duck1">
-            <img src="img/duck1.png" alt="오리1">
-        </div>
-        <div class="duck2">
-            <img src="img/duck2.png" alt="오리2">
-        </div>
-        <div class="balloon">
-            <img src="img/balloon.png" alt="열기구">
-        </div>
-        <div class="cloud1">
-            <img src="img/cloud2.png" alt="구름1">
-        </div>
-        <div class="cloud2">
-            <img src="img/cloud2.png" alt="구름2">
-        </div>
-        <div class="cloud3">
-            <img src="img/cloud2.png" alt="구름3">
-        </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script>
-        jQuery.rnd = function (m, n) {
-            m = parseInt(m);
-            n = parseInt(n);
-            return Math.floor(Math.random() * (n - m + 1)) + m;
-        }
 
-        function hearts() {
-            $.each($(".hearts"), function () {
-                var heartcount = ($(this).width() / 50);
-                for (var i = 0; i <= heartcount; i++) {
-                    var size = ($.rnd(60, 120) / 10);
-                    $(this).append('<span class="particle" style="top:' + $.rnd(20, 80) + '%; left:' + $.rnd(0,
-                        95) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($
-                        .rnd(0, 30) / 10) + 's;"></span>');
-                }
-            });
-        }
-        hearts();
-    </script>
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>박지선</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html"><em>벤더 프리픽스</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/InLine</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">float</a></li>
+                <li class="active"><a href="cssRefer07.html">벤더 프리픽스</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+        <div class="refer">
+            <div class="doc">
+                <h3>벤더 프리픽스란?</h3>
+                <p>벤더 프리픽스(vendor prefix)란 이러한 주요 웹 브라우저 공급자가 새로운 실험적인 기능을 제공할 때 이전 버전의 웹 브라우저에 그 사실을 알려주기 위해 사용하는 접두사(prefix)를 의미합니다. 즉 아직 CSS 권고안에 포함되지 못한 기능이나, CSS 권고안에는 포함되어 있지만 아직 완벽하게 제정된 상태가 아닌 기능을 사용하고자 할 때 벤더 프리픽스를 사용하게 됩니다. 그렇게 하면 해당 기능이 포함되어 있지 않은 이전 버전의 웹 브라우저에서도 그 기능을 사용할 수 있게 됩니다.</p>
+               
+                <h4>주요 웹 브라우저의 벤더 프리픽스(vendor prefix)</h4> 
+                <p>주요 웹 브라우저가 사용하고 있는 벤더 프리픽스는 다음과 같습니다.</p> 
+                
+                    <img src="assets/img/Prefix.JPG" alt="Prefix">
+                    <p>크롬과 사파리는 같은 웹킷 계열 브라우저이므로 같은 벤더 프리픽스를 사용합니다.</p>
+                <h4>예제</h4>
+                    <img src="assets/img/Prefix1.JPG" alt="Prefix예제">
+            </div>
+        <div>
+                <!-- //refer -->
+    </main>
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
 </body>
 
 </html>
