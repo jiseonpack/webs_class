@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Referrnce</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/html.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/html.png">
+    <link rel="icon" href="../assets/face/html.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>박지선</strong>
+    </header>
+
+    <main id="contents">
+        <h2><em>이미지를 표현 방법</em></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/InLine</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">float</a></li>
+                <li class="active"><a href="cssRefer07.html">벤더 프리픽스</a></li>
+                <li><a href="cssRefer08.html">이미지 표현 방법</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>1. HTML 태그를 통해서 표현 : img 태그</h3>
+                <p>HTML 문서에서 이미지를 표시하기 위해 사용하는 img 태그에는 src라는 속성이 있고, 이 속성은 속성값으로 표시할 이미지 소스 파일의 위치 정보, 즉 url을 입력받습니다. 이번 포스팅에서는 이 src 속성에 url을 지정하는 몇 가지 방법에 대해서 소개하도록 하겠습니다.</p>
+                <ul>
+                    <li>1. 상대경로 </li>
+                    <li>2. 절대경로</li>
+                    <li>3. 웹서버 주소</li>
+                </ul>
+                <h4>상대경로 </h4>
+                <p>상대경로는 이미지를 표시할 HTML 문서의 위치를 기준으로 이미지 소스 파일의 위치를 인식하는 방식입니다. 상대경로를 지정하기 위해서는 다음의 기호들을 적절히 사용해주어야 합니다. </p>
+                <h4>절대경로 </h4>
+                <p>절대경로는 간단합니다. 표시하고 싶은 이미지의 위치 값을 그대로 가져오기만 하면 됩니다. 이미지가 저장되어 있는 폴더를 열고 '주소를 텍스트로 복사'하는 방법이 가장 간단한 방법입니다. 몇 가지 간단한 예만 소개하겠습니다. </p>
+                <h4>웹서버 주소</h4>
+                <p>웹서버 주소 지정은 이미지가 저장되어 있는 서버의 주소를 그대로 src에 입력하는 방식입니다. 인터넷을 구경하다가 내 HTML 문서에 표시하고 싶은 이미지를 발견한 상황을 가정해봅니다.발견한 이미지를 마우스 오른쪽 버튼으로 클릭하면, '이미지 주소 복사'라는 메뉴가 보입니다. 이를 클릭합니다. </p>
+                <h3>그리드 시스템의 기본 요소</h3>
+
+                <h3>2. CSS 속성을 통해서 표현</h3>
+                <p>이미지가 의미가 없을 때 background 속성을 사용합니다. 의미가 없기 때문에 대체 문자를 적을 필요가 없습니다.</p>
+                
+                <h3>3. 이미지 스프라이트 기법(Image Sprite)</h3>
+                <ul>
+                    <li>여러 개의 이미지를 하나의 이미지로 합쳐서 관리합니다. </li>
+                    <li>위 기법을 사용하면 이미지 관리가 용이하며 웹페이지의 로딩 시간 및 용량을 줄일 수 있습니다.</li>
+                    <li>위 기법으로 이미지를 넣을 때는 웹표준 준수를 위해 가상으로 대체 문자를 만들어야 합니다.</li>
+                    <li>가상으로 대체 문자를 만들어 주기 위해서는 IR 기법을 사용합니다. </li>
+                    <li>먼저 이미지의 크기를 지정 해주고 Background 태그를 사용해서 이미지를 넣습니다.</li>
+                    <li>그 후에  Background-position을 사용해서 이미지 위치를 지정하여 원하는 이미지를 로딩 합니다.</li>
+                </ul>
+
+                <h4>웹표준을 준수하기 위한 가상 대체문자 기법</h4>
+                <p>IR 기법(Image Replacement)은 무엇인가?</p>
+                <ul>
+                    <li>의미있는 이미지의 대체 텍스트를 제공하는 경우</li>
+                    <li>이미지로 대체할 엘리먼트에 배경이미지를 설정하고 글자는 text-indent를 이용하여 화면 바깥으 로 (-9999px만큼 내어 쓰기) 빼내어 보이지 않게 하 는 방법</li>
+                </ul>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>
