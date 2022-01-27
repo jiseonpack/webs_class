@@ -239,10 +239,10 @@
 }
 @media (-webkit-min-device-pixel-ratio: 2.5){
     .itType01 .img1{
-        background-image: url(../img/img_text_bg1@2x.jpg);
+        background-image: url(../img/img_text_bg1@3x.jpg);
     }
     .itType01 .img2{
-        background-image: url(../img/img_text_bg2@2x.jpg);
+        background-image: url(../img/img_text_bg2@3x.jpg);
     }
 }
 /* itType02 */
