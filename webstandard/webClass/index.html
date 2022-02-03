@@ -3,49 +3,56 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="webstoryboy">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="웹 표준을 준수한 사이트 예제입니다.">
-    <meta name="keywords" content="웹표준, 웹접근성, 샘플사이트">
-    <meta name="generator" content="brackets">
+    <meta name="keywords" content="웹표준, 웹접근성, 사이트 만들기">
     <title>WEBSTANDARD SITE</title>
-    
-    <!-- style -->
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    
+
+    <!-- CSS STYLE -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- 웹 폰트 -->
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 스킵 내비게이션 -->
+    <!-- 스킵 네비게이션 -->
     <div id="skip">
-        <a rel="bookmark" href="#cont_nav">전체 메뉴 바로가기</a>
-        <a rel="bookmark" href="#cont_ban">배너 영역 바로가기</a>
-        <a rel="bookmark" href="#cont_cont">컨텐츠 영역 바로가기</a>
+        <a href="#cont_nav">전체 메뉴 바로가기</a>
+        <a href="#cont_ban">베너 영역 바로가기</a>
+        <a href="#cont_cont">컨텐츠 영역 바로가기</a>
     </div>
-    <!-- //스킵 내비게이션 -->
-    
+    <!-- //스킵 네비게이션 -->
+
     <div id="wrap">
-        <div id="header" role="header">
+        <div id="header">
             <div class="container">
                 <div class="header">
                     <div class="header-menu">
                         <a href="https://jjjjjjjjjsun.tistory.com/">Desinger</a>
-                        <a href="https://github.com/jiseonpack/">Publisher</a>
+                        <a href="https://webstoryboy">Publisher</a>
                         <a href="https://www.youtube.com/">Youtube</a>
                     </div>
                     <!-- //헤더 메뉴 -->
                     <div class="header-tit">
                         <h1>Professional Publisher &amp; Designer</h1><br>
-                        <a href="https://webstoryboy.co.kr/">jjjjjjjjjsun.co.kr</a>
+                        <a href="/https://github.com/jiseonpack/webs_class/">https://지선.com</a>
                     </div>
                     <!-- //헤더 타이틀 -->
+
+                    <!-- 이미지를 표현하는 방법
+                        1. img 태그로 표현(의미가 있을 때) / alt 태그 - 대체 문자 표현
+                        2. background 속성으로 표현(의미가 없을 때) - 대체 문자 X
+                        3. 이미지를 background 속성 - 웹 표준 준수하기 위해서는 가상으로 대체 문자를 만들어줌(IR 효과)
+                            이미지 스프라이트 효과
+                    -->
                     <div class="header-icon">
-                        <a href="#" class="icon1"><span class="ir_pm">icon1</span></a>
-                        <a href="#" class="icon2"><span class="ir_pm">icon2</span></a>
-                        <a href="#" class="icon3"><span class="ir_pm">icon3</span></a>
-                        <a href="#" class="icon4"><span class="ir_pm">icon4</span></a>
+                        <a href="#" class="icon1"><span class="ir_pm">incon1</span></a>
+                        <a href="#" class="icon2"><span class="ir_pm">incon2</span></a>
+                        <a href="#" class="icon3"><span class="ir_pm">incon3</span></a>
+                        <a href="#" class="icon4"><span class="ir_pm">incon4</span></a>
                     </div>
                     <!-- //헤더 아이콘 -->
                 </div>
@@ -56,12 +63,12 @@
         <div id="contents">
             <div id="cont_nav">
                 <div class="container">
-                    <h2 class="ir_su">전체 메뉴</h2>
+                    <h2 class="ir_so">전체 메뉴</h2>
                     <div class="nav">
                         <div>
                             <h3>HTML Reference</h3>
                             <ol>
-                                <li><a href="#">HTML 태그(Tag)</a></li>
+                                <li><a href="#">HTML 테그(Tag)</a></li>
                                 <li><a href="#">블록 요소/인라인 요소</a></li>
                                 <li><a href="#">DTD 선언</a></li>
                                 <li><a href="#">언어 속성 설정</a></li>
@@ -112,17 +119,15 @@
                 </div>
             </div>
             <!-- //cont_nav -->
-            
             <div id="cont_tit">
                 <div class="container">
                     <div class="tit">
-                        <h2>&ldquo;나는 퍼블리셔다!&rdquo;</h2>
+                        <h2>"나는 퍼블리셔다"</h2>
                         <a href="#" class="btn"><span class="ir_pm">전체메뉴</span></a>
                     </div>
                 </div>
             </div>
             <!-- //cont_tit -->
-            
             <div id="cont_ban">
                 <div class="container">
                     <div class="ban">
@@ -137,38 +142,37 @@
                 </div>
             </div>
             <!-- //cont_ban -->
-            
             <div id="cont_cont">
                 <div class="container">
                     <div class="cont">
                         <div class="column col1">
-                            <h3><span class="ico_img ir_pm">아이콘1</span><em class="ico_tit">Notice</em></h3>
-                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_title">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
                         </div>
                         <!-- //col1 -->
                         <div class="column col2">
-                            <h3><span class="ico_img ir_pm">아이콘2</span><em class="ico_tit">Notice</em></h3>
-                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_title">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
                         </div>
                         <!-- //col2 -->
                         <div class="column col3">
-                            <h3><span class="ico_img ir_pm">아이콘3</span><em class="ico_tit">Notice</em></h3>
-                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_title">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
                         </div>
                         <!-- //col3 -->
                         <div class="column col4">
-                            <h3><span class="ico_img ir_pm">아이콘4</span><em class="ico_tit">Notice</em></h3>
-                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_title">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
                         </div>
                         <!-- //col4 -->
                         <div class="column col5">
-                            <h3><span class="ico_img ir_pm">아이콘5</span><em class="ico_tit">Notice</em></h3>
-                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_title">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
                         </div>
                         <!-- //col5 -->
                         <div class="column col6">
-                            <h3><span class="ico_img ir_pm">아이콘6</span><em class="ico_tit">Notice</em></h3>
-                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_title">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
                         </div>
                         <!-- //col6 -->
                     </div>
@@ -177,8 +181,8 @@
             <!-- //cont_cont -->
         </div>
         <!-- //contents -->
-        
-        <div id="footer" role="footer">
+
+        <div id="footer">
             <div class="container">footer</div>
         </div>
         <!-- //footer -->
@@ -186,15 +190,3 @@
     <!-- //wrap -->
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
