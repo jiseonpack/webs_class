@@ -108,6 +108,25 @@
                 <div class="result04"></div> 
             </div>  
             <!-- //04 -->
+            <!-- 05 -->
+            <h3>1-5. for문 이용해서 1부터 100까지 합을 출력하시오.</h3>
+
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{    
+    let sum = 0;
+
+    for(let i=0; i&lt;=100; i++){
+        sum = sum + i
+    }
+
+    document.write(sum)
+}</code></pre>
+            </div>
+            <div class="result result05">
+                <h4>결과보기</h4>
+                <div class="result05"></div> 
+            </div>  
+            <!-- //05 -->
     </main>
     <script>
         //while문을 이용해서 1부터 100가지 출력
@@ -142,6 +161,16 @@
                 }
             }
         }
+        // for문 이용해서 1부터 100까지 합을 출력
+        {
+            let sum = 0;
+
+            for(let i=0; i<=100; i++){
+                sum = sum + i
+            }
+            document.querySelector(".result .result05").innerHTML += sum+" ";
+        }
+        
     </script>
     <script src="assets/js/script.js"></script>
 </body>
