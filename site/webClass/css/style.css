@@ -236,11 +236,11 @@
         background-image: url(../img/img_text_bg2@2x.jpg);
     }
 }
-@media (-webkit-min-device-pixel-ratio: 2.5){
-    .imgText_type01 .img1{
+@media (-webkit-min-device-pixel-ratio: 2.5) {
+    .imgText_type01 .img1 {
         background-image: url(../img/img_text_bg1@3x.jpg);
     }
-    .imgText_type01 .img2{
+    .imgText_type01 .img2 {
         background-image: url(../img/img_text_bg2@3x.jpg);
     }
 }
