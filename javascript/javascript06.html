@@ -943,6 +943,12 @@
                             <td class="sample13_M3"></td>
                             <td class="sample13_R3"></td>
                         </tr>
+                        <tr>
+                            <td class="sample13_N4"></td>
+                            <td class="sample13_Q4"></td>
+                            <td class="sample13_M4"></td>
+                            <td class="sample13_R4"></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -1416,20 +1422,62 @@
             document.querySelector(".sample12_M3").innerHTML = "filter(el => el>=300)";
             document.querySelector(".sample12_R3").innerHTML = result3; 
         }
-
+        //{13}
         //20. 배열 메서드 : map() : 배열 요소 추출하여 새로운 배열로 만듦 : 반환(배열)
         //배열.map(콜백함수)
         {
-            const arrNum1 = [100, 200, 300, 400, 500];
-            const result1 = arrNum.map(el => el);
+            const arrNum = [100, 200, 300, 400, 500];
+            const result = arrNum.map(el => el);
 
             document.querySelector(".sample13_N1").innerHTML = 1;
             document.querySelector(".sample13_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample13_M1").innerHTML = "map(el => el)";
-            document.querySelector(".sample13_R1").innerHTML = result1; 
+            document.querySelector(".sample13_R1").innerHTML = result; 
 
+            const arrNum2 = [100, 200, 300, 400, 500];
+            const result2 = arrNum2.map(el => el + "J");
+
+            document.querySelector(".sample13_N2").innerHTML = 2;
+            document.querySelector(".sample13_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample13_M2").innerHTML = "arrNum2.map(el => el + 'J'";
+            document.querySelector(".sample13_R2").innerHTML = result2; 
+
+            const arrNum3 = [100, 200, 300, 400, 500];
+            const result3 = arrNum3.map(el => el + 100);
+
+            document.querySelector(".sample13_N3").innerHTML = 3;
+            document.querySelector(".sample13_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample13_M3").innerHTML = "arrNum2.map(el => el + 100";
+            document.querySelector(".sample13_R3").innerHTML = result3; 
+
+            const arrNum4 = [{a:100},{b:200},{c:300}];
+            const result4 = arrNum4.map(el => el.a);
+
+            document.querySelector(".sample13_N4").innerHTML = 4;
+            document.querySelector(".sample13_Q4").innerHTML = "[{a:100},{b:200},{c:300}]";
+            document.querySelector(".sample13_M4").innerHTML = "arrNum4.map(el => el.a)";
+            document.querySelector(".sample13_R4").innerHTML = result4; 
         }
 
+
+        //숙제
+        {
+            arrBox = [100, 200, 300, 400, 500, 600, 700];
+
+            //300, 400
+
+            //100, 300, 500, 700
+
+            //700
+
+            arrBow2= ["j", "b", "c", "d", "e" ]
+
+            //j
+
+            //jc
+
+            //jbcd
+        }
     </script>
 </body>
 </html>
