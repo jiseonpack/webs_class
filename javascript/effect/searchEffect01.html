@@ -208,7 +208,7 @@
             cssList.forEach(el => {
                 //console.log(el.dataset.name);
               
-                const cssName = el.dataset.name; //CSS 속성 값
+                const cssName = el.dataset.name; //CSS 속성 값(data-name)을 골라서 배열화 시킴.
                
                 if(cssName.indexOf(searchWord)){
                     el.classList.add("hide");
@@ -217,6 +217,24 @@
                 }
             })
         });
+
+        // let numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        //for문 이용해서 1부터 9까지 출력 
+        // for(let i=0; i<numArr.length; i++){
+        //     console.log(numArr[i]);
+        // }
+        // //forEach를 이용해서 
+        // numArr.forEach(el=>{
+        //     console.log(el);
+        // })
+        // //for of 
+        // for(let i of numArr){
+        //     console.log(i);
+        // }
+        // //for in
+        // for(let i in numArr){
+        //     console.log(numArr[i]);
+        // }
     </script>
 </body>
 </html>
