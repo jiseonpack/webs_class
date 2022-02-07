@@ -1621,11 +1621,11 @@
             document.querySelector(".sample15_R3").innerHTML =  result3;
            
             const arrBox4 = [100, 200, 300, 400, 500, 600, 700];
-            const result4 = arrBox4.splice(0, 6, 100, 300, 500);
+            const result4 = arrBox4.filter(el => el % 200 != 0)
 
             document.querySelector(".sample15_N4").innerHTML = 4;
             document.querySelector(".sample15_Q4").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
-            document.querySelector(".sample15_M4").innerHTML = "";
+            document.querySelector(".sample15_M4").innerHTML = "filter(el => el % 200 != 0)";
             document.querySelector(".sample15_R4").innerHTML =  result4;
 
             //700 (정답2개이상)
@@ -1665,15 +1665,15 @@
 
             //jc (정답2개이상)
             const arrBox9 = ["j", "b", "c", "d", "e"];
-            const result9 = arrBox9.splice(0, 1) + arrBox9.splice(1, 1);
+            const result9 = arrBox9.filter(el => el == 'j' || el == 'c');
 
             document.querySelector(".sample15_N9").innerHTML = 9;
             document.querySelector(".sample15_Q9").innerHTML = '["j", "b", "c", "d", "e"]';
-            document.querySelector(".sample15_M9").innerHTML = "arrBox9.splice(0, 1) + arrBox9.splice(1, 1)";
+            document.querySelector(".sample15_M9").innerHTML = ".filter(el => el == 'j' || el == 'c');";
             document.querySelector(".sample15_R9").innerHTML =  result9;
-           
+
             const arrBox10 = ["j", "b", "c", "d", "e"];
-            const result10 = arrBox10.splice(0, 3, 'j','c');
+            const result10 = arrBox10.splice(0,1,"c");
 
             document.querySelector(".sample15_N10").innerHTML = 10;
             document.querySelector(".sample15_Q10").innerHTML = '["j", "b", "c", "d", "e"]';
