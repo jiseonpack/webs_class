@@ -217,25 +217,26 @@
             {name: "direction", desc: "direction 속성은 문장의 방향을 설정합니다."},
             {name: "flex", desc: "flex 속성은 콘텐츠의 성질을 flex로 정의합니다."}
         ];
-        const searchBox = document.querySelector("#search-box");
-        const cssCount = document.querySelector(".count");
-        const cssDesc = document.querySelector(".desc");
-        const cssList = document.querySelector(".list");
+        const searchBox = document.querySelector("#search-box"); //서치박스를 변수로 지정
+        const cssCount = document.querySelector(".count");//갯수가 출력되는 요소를 변수로 지정
+        const cssDesc = document.querySelector(".desc");//설명 영역을 변수로 지정
+        const cssList = document.querySelector(".list");//속성 리스트를 변수로 지정
 
         //CSS 속성 값 출력하기
         cssProperty.map((element, index) => {
-            cssCount.innerText ="전체 목록 갯수 : "+ (index+1) +" 개";
+            cssCount.innerText ="전체 목록 갯수 : "+ (index+1) +" 개";//map를 이용해서 element와 index 불러오기
             cssList.innerHTML += "<span>"+ element.name + "</span>";
         });
 
         //사용자가 검색한 값
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value;
+        searchBox.addEventListener("keyup", () => {//keyup 이벤트를 했을 때를 지정.
+            const searchWord = searchBox.value; //서치박스에 들어오는 입력값을 변수로 지정.
             //console.log(searchWord)
 
-            findProp(searchWord);
+            findProp(searchWord);// 입력값 변수를 매개변수로 지정해서 함수를 실행.  
         });
 
+        //리스트를 클릭하면 설명 영역에 바로 설명이 들어옴.   
         document.querySelectorAll(".list span").forEach(span => {
             span.addEventListener("click", ()=> {
                 //클릭한 데이터 값을 가져오기
@@ -247,15 +248,16 @@
             const targetData = cssProperty.find((data) => data.name === searchProp)
            
             //찾는 데이터가 없을 때
-            if(targetData == null){
+            if(targetData == null){ //입력한 값이 null 일때 if문을 작성.
                 cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해 주세요!"
                 return;
             }
             // console.log(targetData)
            
-            cssDesc.innerHTML = targetData.desc;
-        }
-
+            cssDesc.innerHTML = targetData.desc; //설명 영역에 서치박스에 입력한 속성의 설명을 출력.
+            // cssDesc.innerText = 
+            // cssDesc.textContent = 
+        }   
     </script>
 </body>
 </html>

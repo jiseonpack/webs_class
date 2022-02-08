@@ -268,25 +268,25 @@
     </div>
     <!-- script -->
     <script>
-        const searchBox = document.querySelector("#search-box");
-        const cssList = document.querySelectorAll(".list ul li");
-        const cssCount = document.querySelector(".count em")
+        const searchBox = document.querySelector("#search-box");//input 서치박스를 지정.
+        const cssList = document.querySelectorAll(".list ul li"); // 모든 li에 대해서 지정.
+        const cssCount = document.querySelector(".count em") // 서치박스 우측 전체 속성 갯수에 대해서 지정.
        
-        cssList.forEach((e, index) => {
-                e.classList.add("show");
-                console.log(index);
-                cssCount.innerHTML = index + 1;
+        cssList.forEach((e, index) => { //forEach를 이용해서 모든 li의 index를 불러온다.
+                e.classList.add("show");// 불러온 index에 CSS .show 클래스를 부여해준다. 
+                // console.log(index);
+                cssCount.innerHTML = index + 1; //index는 0번째 부터 시작하므로 1을 더해서 입력해준다.
         })
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value; //사용자가 입력한 값
+        searchBox.addEventListener("keyup", () => {//서치박스를 key up 하는것에 대해 이벤트를 지정해준다.
+            const searchWord = searchBox.value; //사용자가 서치박스에 입력하는 값을 변수로 지정한다.
            
             cssList.forEach(el => {
-                const cssName = el.dataset.name; //CSS 속성 모든 값
+                const cssName = el.dataset.name; //css 속성값 (모든 값) 을 변수로 지정한다.
           
-                if(cssName.includes(searchWord)){
-                    el.classList.add("show");
+                if(cssName.includes(searchWord)){ //if문 조건문에 includes()를 사용한다.
+                    el.classList.add("show"); //조건이 True면 show 클래스를 추가한다.
                 } else {
-                    el.classList.remove("show");
+                    el.classList.remove("show");//그 이외의 결과는 show 클래스를 제거한다.
                 }
             });
         });
