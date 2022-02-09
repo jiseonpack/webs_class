@@ -515,7 +515,24 @@
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    const str = "자바스크립트(javascript) 공부"
 
+    const text1 = str.slice(1,4);
+
+    const text2 = str.slice(1);
+
+    const text3 = str.slice(3, -1);
+
+    const text4 = str.slice(7, -4);
+    // const text4 = str.slice(7, 17);
+    // const text4 = str.slice(-14, -4);
+    // const text4 = str.slice(-14, 17);
+
+    const text5 = str.slice(5, 1);
+
+    const text6 = str.substring(5, 1);
+
+    const text7 = str.substr(4, 2);
 }</code></pre>
                 </div>
             </div>
@@ -729,6 +746,9 @@
         //15. 문자열 메서드 : substr() : 지정한 범위 내 문자열을 추출 : 반환(문자열)
         //slice(시작 인덱스)
         //slice(시작 인덱스, 종료 인덱스)
+        //시작 값이 종료 값 보다 클 경우 : 결과 값 없음
+        //substring() : 시작 값이 종료 값 보다 클 경우 : 두 값을 바꿔서 처리
+        //substr(시작 인덱스, 글자수)
         {
             const str = "자바스크립트(javascript) 공부"
 
@@ -746,6 +766,43 @@
             document.querySelector(".sample7_M2").innerHTML = "slice(1)";
             document.querySelector(".sample7_P2").innerHTML = text2;
 
+            const text3 = str.slice(3, -1);
+
+            document.querySelector(".sample7_N3").innerHTML = 3;
+            document.querySelector(".sample7_Q3").innerHTML = str;
+            document.querySelector(".sample7_M3").innerHTML = "slice(3, -1)";
+            document.querySelector(".sample7_P3").innerHTML = text3;
+
+            const text4 = str.slice(7, -4);
+            // const text4 = str.slice(7, 17);
+            // const text4 = str.slice(-14, -4);
+            // const text4 = str.slice(-14, 17);
+
+            document.querySelector(".sample7_N4").innerHTML = 4;
+            document.querySelector(".sample7_Q4").innerHTML = str;
+            document.querySelector(".sample7_M4").innerHTML = "slice(7, -4)";
+            document.querySelector(".sample7_P4").innerHTML = text4;
+
+            const text5 = str.slice(5, 1);
+
+            document.querySelector(".sample7_N5").innerHTML = 5;
+            document.querySelector(".sample7_Q5").innerHTML = str;
+            document.querySelector(".sample7_M5").innerHTML = "slice(5, 1)";
+            document.querySelector(".sample7_P5").innerHTML = "실행안됨";
+
+            const text6 = str.substring(5, 1);
+
+            document.querySelector(".sample7_N6").innerHTML = 6;
+            document.querySelector(".sample7_Q6").innerHTML = str;
+            document.querySelector(".sample7_M6").innerHTML = "substring(5, 1)";
+            document.querySelector(".sample7_P6").innerHTML = text6;
+
+            const text7 = str.substr(4, 2);
+
+            document.querySelector(".sample7_N7").innerHTML = 7;
+            document.querySelector(".sample7_Q7").innerHTML = str;
+            document.querySelector(".sample7_M7").innerHTML = "substr(4, 2)";
+            document.querySelector(".sample7_P7").innerHTML = text7;
         }
     </script>
 </body>

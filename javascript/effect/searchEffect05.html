@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- 파비콘 -->
+   <link rel="shortcut icon" href="../../assets/ico/icc06.png">
+   <link rel="apple-touch-icon-precomposed" href="../../assets/ico/icc06.png">
+   <link rel="icon" href="../../assets/ico/icc06.png" sizes="128x128">
+  
+   <title>Search Effect</title>
+    <style>
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'NexonLv1Gothic';
+            font-size: 16px;
+            line-height: 1.6;
+            word-break: break-all;
+            color: #223547;
+        }
+        a {
+            text-decoration: none;
+            color: #223547;
+        }
+        .number {
+            margin: 10px;
+        }
+        .number li {
+            list-style: none;
+            display: inline;
+        }
+        .number li a {
+            border: 1px solid #223547;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            transition: all 0.3s;
+        }
+        .number li.active a {
+            background: #223547;
+            color: #fff;
+        }
+        .board {
+            margin: 5vw 10vw 10vw 10vw;
+            width: 80vw;
+            background: #f1f3f6;
+            border: 2px solid #223547;
+            padding: 3vw;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .board .sub {
+            font-size: 20px;
+        }
+        .board .sub a {
+            font-size: 20px;
+            border-bottom: 1px solid #223547;
+        }
+        .board h1 a {
+            font-family: 'TmonMonsori';
+            font-size: 80px;
+            margin-bottom: 2vw;
+        }
+        .board .search {
+            margin-bottom: 3vw;
+        }
+        .board .search label {
+            display: none;
+        }
+        .board .search input {
+            font-size: 24px;
+            border: 2px solid #223547;
+            padding: 10px 40px;
+            border-radius: 40px;
+            width: 50%;
+        }
+        .board .count {
+            text-align: right;
+            color: #777;
+        }
+        .board .count em {
+            font-style: normal;
+            color: #223557;
+        }
+        .board .list {
+            text-align: left;
+        }
+        .board .list li {
+            background-color: #bdd6e6;
+            margin: 5px 0;
+            padding: 5px 10px;
+            border-radius: 4px;
+            list-style: none;
+            transition: all 0.3s;
+        }
+        .board .list li:hover {
+            background-color: #a5c3d5;
+            cursor: grabbing;
+        }
+        @media (max-width: 800px){
+            .board {
+                margin: 2vw 2vw 2vw 2vw;
+                width: 96vw;
+                padding: 4vw 2vw;
+            }
+            .board .sub {
+                font-size: 14px;
+            }
+            .board .sub a {
+                font-size: 14px;
+            }
+            .board h1 a {
+                font-size: 40px;
+            }
+            .board .search input {
+                font-size: 16px;
+                padding: 5px 20px;
+                width: 100%;
+            }
+            .board .list li {
+                font-size: 14px;
+            }
+        }
+        /* option */
+        .board .search span {
+            border: 1px solid #223547;
+            border-radius: 30px;
+            padding: 5px 30px;
+            display: inline-block;
+            margin: 3px;
+            transition: all 0.2s;
+        }
+        .board .search span:hover {
+            background: #223547;
+            color: #fff;
+            cursor: pointer;
+        } 
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="number">
+            <ul>
+                <li><a href="searchEffect01.html">1</a></li>
+                <li><a href="searchEffect02.html">2</a></li>
+                <li><a href="searchEffect03.html">3</a></li>
+                <li><a href="searchEffect04.html">4</a></li>
+                <li class="active"><a href="searchEffect05.html">5</a></li>
+                <li><a href="searchEffect06.html">6</a></li>
+                <li><a href="searchEffect07.html">7</a></li>
+                <li><a href="searchEffect08.html">8</a></li>
+            </ul>       
+        </div>
+        <div class="board">
+            <span class="sub"><a href="../javascript06.html#sample11"> filter( )</a> 를 이용하여 조회수 검색하기</span>
+            <h1><a href="searchEffect.html"> CSS 속성 검색하기</a></h1>
+          
+            <!-- 검색 영역 -->
+            <div class="search">
+                <span>조회수 10개 이상</span>
+                <span>조회수 20개 이상</span>
+                <span>조회수 30개 이상</span>
+                <span>조회수 40개 이상</span>
+            </div>
+
+            <!-- 전체 목록 갯수 -->
+            <div class="count">전체 목록 갯수 : 0 개</div>
+
+            <!-- CSS 속성 리스트 -->
+            <div class="list">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script>
+        const cssProperty = [
+            {view: "10",name: "all", desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 양식 속성입니다."},
+            {view: "20",name: "animation", desc: "animation 속성은 애니메이션 사용할 수 있는 양식 속성입니다."},
+            {view: "13",name: "animation-delay", desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
+            {view: "40",name: "animation-direction", desc: "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
+            {view: "20",name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
+            {view: "40",name: "backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
+            {view: "15",name: "backdrop-visibility", desc: "backdrop-visibility 속성은 요소 뒷면 출력 여부 설정합니다."},
+            {view: "14",name: "caption-side", desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다."},
+            {view: "30",name: "direction", desc: "direction 속성은 문장의 방향을 설정합니다."},
+            {view: "50",name: "flex", desc: "flex 속성은 콘텐츠의 성질을 flex로 정의합니다."},
+            {view: "49",name:"perspective", desc: "perspective 속성은 3차원 공간을 활성화하여 해당 요소의 자식이 해당 공간에 배치될 수 있도록 하는 데 사용됩니다."},
+            {view: "20",name:"perspective-origin", desc: "perspective-origin 속성은 뷰어가 3차원 공간을 바라보는 위치를 선택하는 데 사용됩니다."},
+            {view: "10",name:"pointer-events", desc: "pointer-events 속성은 특정 그래픽 요소가 포인터 이벤트의 대상이 될 수 있는 조건을 제어하는 데 사용됩니다 ."},
+            {view: "40",name:"position", desc: "position 속성은 페이지에서 요소의 위치를 설정하는 데 사용됩니다 ."},
+            {view: "15",name:"quotes", desc: "quotes 속성은 속성을 사용하여 삽입할 때 사용할 따옴표를 지정하는 데 사용됩니다"},
+            {view: "13",name:"resize", desc: "resize 속성은 사용자가 요소의 크기를 조정할 수 있는지 여부와 가능한 경우 방향을 지정할 수 있습니다."},
+            {view: "15",name:"right", desc: "right 속성은 위치 지정 요소의 오른쪽 오프셋을 지정하는 데 사용되는 오프셋 속성입니다 ."},
+            {view: "10",name:"shape-image-threshold", desc: "shape-image-threshold 속성은 css모양 외부에 이미지를 사용할 때 모양을 추출하는 데 사용되는 알파 채널의 임계값을 설정하는 데 사용됩니다."},
+            {view: "10",name:"shape-margin", desc: "shape-margin 속성은 css모양에 여백을 추가하는 데 사용됩니다."},
+            {view: "10",name:"shape-outside", desc: "shape-outside 속성은 float된 요소의 경계를 감싸는 방식을 제어하는 데 사용됩니다."},
+            {view: "10",name:"tab-size", desc: "tab-size 속성은 속성은 페이지에 표시되는 탭 문자의 너비를 결정하는 데 사용됩니다."},
+            {view: "10",name:"table-layout", desc: "table-layout 속성은 테이블 열, 행 및 셀의 레이아웃을 지정합니다."},
+            {view: "10",name:"text-align", desc: "text-align 속성은 블록 요소 내부의 인라인 요소가 정렬되는 방식을 제어하는 데 사용됩니다."},
+            {view: "10",name:"text-align-last", desc: "text-align-last 속성은 강제 줄 바꿈 직전의 블록이나 줄의 마지막 줄을 정렬하는 방법을 설정하는 데 사용됩니다."},
+            {view: "10",name:"text-decoration", desc: "text-decoration 속성은 텍스트 위, 텍스트 아래 또는 텍스트 위에 선 형태로 장식을 추가하거나 기존 장식을 제거하는 데 사용됩니다."},
+            {view: "10",name:"text-decoration-color", desc: "text-decoration-color 속성은 요소에 설정된 텍스트 장식(밑줄, 윗줄 및 선 통과)의 색상을 지정합니다"},
+        ];
+
+        const searchBox = document.querySelectorAll(".search span");    //알파벳 버튼들
+        const cssList = document.querySelector(".list ul");     //CSS속성 리스트
+        const cssCount = document.querySelector(".count em")    //속성 갯수
+
+        searchBox.forEach(el => {
+            el.addEventListener("click", ()=>{
+                onCliickButton()
+            });
+        });
+
+        //변수(데이터저장+변경+추가+전역/지역),
+        //배열(순차적으로 여러개 데이터저장),
+        //객체(데이터저장(키와 값)), 
+        //함수(실행문 집합체, 재활용)
+
+        //버튼을 클릭했을 때
+        function onCliickButton(){
+
+        }
+
+        //CSS 리스트 출력하기 
+        function upDataList(){
+            let list = "";
+            
+            for(let data of cssProperty){
+                // list +="<li>"+ li.view + "</li>";
+                list+= `<li>${data.name} : ${data.desc} <span>${data.view}</sapn></li>`
+            }
+            
+            cssList.innerHTML = list;
+        }
+        upDataList();
+
+
+        // for문
+        // function upDataList(){
+        //     let list = "";
+        
+        //     for( let i=0; i<cssProperty.length; i++){
+        //         list +="<li>"+ cssProperty[i].view + "</li>";
+        //     }
+        
+        //     cssList.innerHTML = list;
+        // }
+        // upDataList();
+        
+        // forEach문
+        // function upDataList(){
+        //     let list = "";
+        
+        //     cssProperty.forEach( li => {
+        //         list +="<li>"+ li.view + "</li>";
+        //     })
+        
+        //     cssList.innerHTML = list;
+        // }
+        // upDataList();
+        
+        </script>
+</body>
+</html>

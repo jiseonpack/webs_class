@@ -179,10 +179,10 @@
                 <li><a href="searchEffect01.html">1</a></li>
                 <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
-                <li class="active"><a href="searchEffect04.html">4</a></li>
+                <li><a href="searchEffect04.html">4</a></li>
                 <li><a href="searchEffect05.html">5</a></li>
                 <li><a href="searchEffect06.html">6</a></li>
-                <li><a href="searchEffect07.html">7</a></li>
+                <li class="active"><a href="searchEffect07.html">7</a></li>
                 <li><a href="searchEffect08.html">8</a></li>
             </ul>       
         </div>
@@ -209,75 +209,6 @@
 
     <!-- script -->
     <script>
-        const cssProperty = [
-            {name: "all", desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 양식 속성입니다."},
-            {name: "animation", desc: "animation 속성은 애니메이션 사용할 수 있는 양식 속성입니다."},
-            {name: "animation-delay", desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
-            {name: "animation-direction", desc: "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
-            {name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
-            {name: "backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
-            {name: "backdrop-visibility", desc: "backdrop-visibility 속성은 요소 뒷면 출력 여부 설정합니다."},
-            {name: "caption-side", desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다."},
-            {name: "direction", desc: "direction 속성은 문장의 방향을 설정합니다."},
-            {name: "flex", desc: "flex 속성은 콘텐츠의 성질을 flex로 정의합니다."},
-            {name:"perspective", desc: "perspective 속성은 3차원 공간을 활성화하여 해당 요소의 자식이 해당 공간에 배치될 수 있도록 하는 데 사용됩니다."},
-            {name:"perspective-origin", desc: "perspective-origin 속성은 뷰어가 3차원 공간을 바라보는 위치를 선택하는 데 사용됩니다."},
-            {name:"pointer-events", desc: "pointer-events 속성은 특정 그래픽 요소가 포인터 이벤트의 대상이 될 수 있는 조건을 제어하는 ​​데 사용됩니다 ."},
-            {name:"position", desc: "position 속성은 페이지에서 요소의 위치를 ​​설정하는 데 사용됩니다 ."},
-            {name:"quotes", desc: "quotes 속성은 속성을 사용하여 삽입할 때 사용할 따옴표를 지정하는 데 사용됩니다"},
-            {name:"resize", desc: "resize 속성은 사용자가 요소의 크기를 조정할 수 있는지 여부와 가능한 경우 방향을 지정할 수 있습니다."},
-            {name:"right", desc: "right 속성은 위치 지정 요소의 오른쪽 오프셋을 지정하는 데 사용되는 오프셋 속성입니다 ."},
-            {name:"shape-image-threshold", desc: "shape-image-threshold 속성은 css모양 외부에 이미지를 사용할 때 모양을 추출하는 데 사용되는 알파 채널의 임계값을 설정하는 데 사용됩니다."},
-            {name:"shape-margin", desc: "shape-margin 속성은 css모양에 여백을 추가하는 데 사용됩니다."},
-            {name:"shape-outside", desc: "shape-outside 속성은 float된 요소의 경계를 감싸는 방식을 제어하는 데 사용됩니다."},
-            {name:"tab-size", desc: "tab-size 속성은 속성은 페이지에 표시되는 탭 문자의 너비를 결정하는 데 사용됩니다."},
-            {name:"table-layout", desc: "table-layout 속성은 테이블 열, 행 및 셀의 레이아웃을 지정합니다."},
-            {name:"text-align", desc: "text-align 속성은 블록 요소 내부의 인라인 요소가 정렬되는 방식을 제어하는 데 사용됩니다."},
-            {name:"text-align-last", desc: "text-align-last 속성은 강제 줄 바꿈 직전의 블록이나 줄의 마지막 줄을 정렬하는 방법을 설정하는 데 사용됩니다."},
-            {name:"text-decoration", desc: "text-decoration 속성은 텍스트 위, 텍스트 아래 또는 텍스트 위에 선 형태로 장식을 추가하거나 기존 장식을 제거하는 데 사용됩니다."},
-            {name:"text-decoration-color", desc: "text-decoration-color 속성은 요소에 설정된 텍스트 장식(밑줄, 윗줄 및 선 통과)의 색상을 지정합니다"},
-        ];
-        const searchBox = document.querySelector("#search-box"); //서치박스를 변수로 지정
-        const cssCount = document.querySelector(".count");//갯수가 출력되는 요소를 변수로 지정
-        const cssDesc = document.querySelector(".desc");//설명 영역을 변수로 지정
-        const cssList = document.querySelector(".list");//속성 리스트를 변수로 지정
-
-        //CSS 속성 값 출력하기
-        cssProperty.map((element, index) => {
-            cssCount.innerText ="전체 목록 갯수 : "+ (index+1) +" 개";//map를 이용해서 element와 index 불러오기
-            cssList.innerHTML += "<span>"+ element.name + "</span>";
-        });
-
-        //사용자가 검색한 값
-        searchBox.addEventListener("keyup", () => {//keyup 이벤트를 했을 때를 지정.
-            const searchWord = searchBox.value; //서치박스에 들어오는 입력값을 변수로 지정.
-            //console.log(searchWord)
-
-            findProp(searchWord);// 입력값 변수를 매개변수로 지정해서 함수를 실행.  
-        });
-
-        //리스트를 클릭하면 설명 영역에 바로 설명이 들어옴.   
-        document.querySelectorAll(".list span").forEach(span => {
-            span.addEventListener("click", ()=> {
-                //클릭한 데이터 값을 가져오기
-                const listProp = span.innerText;
-                findProp(listProp);
-        })
-    })
-        function findProp(searchProp){
-            const targetData = cssProperty.find((data) => data.name === searchProp)
-           
-            //찾는 데이터가 없을 때
-            if(targetData == null){ //입력한 값이 null 일때 if문을 작성.
-                cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해 주세요!"
-                return;
-            }
-            // console.log(targetData)
-           
-            cssDesc.innerHTML = targetData.desc; //설명 영역에 서치박스에 입력한 속성의 설명을 출력.
-            // cssDesc.innerText = 
-            // cssDesc.textContent = 
-        }   
     </script>
 </body>
 </html>
