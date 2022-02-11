@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test3</title>
+
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* 헤더 */
+        #header {
+            display: flex;
+            justify-content: space-between;
+            width: 1249px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .logo {
+            display: flex;
+        }
+        .logo .logo_icon1 {
+            width: 35px;
+            height: 35px;
+            background: url(img/bg-svg01.svg);
+        }
+        .logo .logo_icon2 {
+            width: 108px;
+            height: 21px;
+            background: url(img/bg-svg01.svg) 0 -50px;
+            margin: 8px 0 0 13px;
+        }
+        .logo .logo_text{}
+        .menu {}
+        .menu ul {
+            display: flex;
+        }
+        .menu li {
+            list-style: none;
+            margin-right: 0;
+            font-size: 17px;
+            margin: 0 30px;
+            padding-bottom: 12px;
+        }
+        .menu li a {
+            text-decoration: none;
+            color: #000;
+        }
+        .menu li:hover {
+            padding-bottom: 10px;
+            border-bottom: 2px solid #000;
+        }
+        .header_icon {
+            display: flex;
+        }
+        .header_icon .ico {
+            width: 24px;
+            height: 24px;
+            background: url(img/bg-svg01.svg);
+            margin-left: 25px;
+        }
+        .header_icon .icon01 {
+            background-position: -50px 0;
+        }
+        .header_icon .icon02 {
+            background-position: -75px 0;
+        }
+        .header_icon .icon03 {
+            background-position: -50px -25px;
+        }
+
+        /* 메인 */
+        #contents {
+            width: 1249px;
+            margin: 0 auto;
+            margin-top: 126px;
+        }
+        .contents_bg {
+            background: url(img/site_refer_bg01.jpg) right  no-repeat;
+            height: 853px;
+        }
+        .contents_bg h2 {
+            font-size: 80px;
+            font-weight: 500;
+            line-height: 0.95;
+            letter-spacing: -1.6px;
+            color: #292019;
+        }
+        .contents_bg p {
+            font-size: 18px;
+            text-align: left;
+            width: 432px;
+            margin-top: 55px;
+            color: #72696a
+        }
+        .contents_box {
+            display: flex;
+            margin-top: 35px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.75;
+        }
+        .contents_box .box1 {
+            padding: 21px 45px 21px 36px;
+            background-color: #c4a586;
+            color: #fff;
+        }
+        .contents_box .box2 {
+            padding: 21px 53px 21px 55px;
+            color: #c4a586;
+            border: 1px solid #c4a586;
+            margin-left: 26px;
+        }
+        .contents_txt {
+            text-align: center;
+            margin-top: 134px;
+            font-weight: bold;
+        }
+        .contents_icon {
+            display: flex;
+            justify-content:center;
+            margin-top: 72px;
+        }
+        .contents_icon .ico {}
+        .contents_icon .icon01 {
+            width: 96px;
+            height: 47px;
+            background: url(img/site_refer_bg02.jpg) no-repeat;
+            margin-right: 98px;
+        }
+        .contents_icon .icon02 {
+            width: 109px;
+            height: 43px;
+            background: url(img/site_refer_bg03.jpg) 0 5px no-repeat;
+            margin-right: 72px;
+        }
+        .contents_icon .icon03 {
+            width: 147px;
+            height: 61px;
+            background: url(img/site_refer_bg04.jpg) 0 -6px no-repeat;
+            margin-right: 72px;
+        }
+        .contents_icon .icon04 {
+            width: 110px;
+            height: 37px;
+            background: url(img/site_refer_bg05.jpg) 0 5px no-repeat;
+            margin-right: 109px;
+        }
+        .contents_icon .icon05 {
+            width: 67px;
+            height: 38px;
+            background: url(img/site_refer_bg06.jpg) 0 10px no-repeat;
+            margin-right: 107px;
+        }
+        .contents_icon .icon06 {
+            width: 122px;
+            height: 36px;
+            background: url(img/site_refer_bg07.jpg) 0 12px no-repeat;
+        }
+
+        /* 이미지 텍스트01 */
+        .img_text01 {
+            display: flex;
+            margin-top: 198px;
+        }
+        .img_text01 .cont1 {
+            width: 50%;
+            height: 388px;
+            background-color: #fcefe9;
+        }
+        .img_text01 .cont2 {
+            width: 50%;
+            height: 388px;
+            background-color: #fae2c8;
+        }
+
+        /* 이미지 텍스트02 */
+        .img_text02 {
+            margin-top: 173px;
+        }
+        .img_text02 .header {
+            width: 1041px;
+            height: 50px;
+            margin: 0 auto;
+            background-color: #fcefe9;
+        }
+        .img_text02 .nav {
+            width: 421px;
+            height: 18px;
+            margin: 0 auto;
+            margin-top: 111px;
+            background-color: #fae2c8;
+        }
+        .img_text02 .img_container01 {
+            display: flex;
+            justify-content: space-between;
+            width: 1056px;
+            margin: 0 auto;
+            margin-top: 150px;
+        }
+        .img_text02 .img_container01 .img_txt01 {}
+        .img_text02 .img_container01 .img_txt02 {}
+        .img_text02 .img_container01 .img_txt03 {}
+        .img_text02 .img_container02 {
+            display: flex;
+            justify-content: space-between;
+            width: 1056px;
+            margin: 0 auto;
+            margin-top: 191px;
+        }
+        .img_text02 .img_container02 .img_txt01 {}
+        .img_text02 .img_container02 .img_txt02 {}
+        .img_text02 .img_container02 .img_txt03 {}
+        .img_text02 .iT {
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+        }
+
+        /* 이미지 텍스트03 */
+        .img_text03 {
+            width: 1056px;
+            margin: 0 auto;
+            margin-top: 307px;
+            position: relative;
+        }
+        .img_text03 .img_container01 {
+            display: flex;
+        }
+        .img_text03 .img_container01 .img {
+            width: 470px;
+            height: 588px;
+            background-color: #fff4e8;
+        }
+        .img_text03 .img_container01 .text {
+            margin-left: 107px;
+        }
+        .img_text03 .img_container01 .text .header {
+            width: 427px;
+            height: 112px;
+            background-color: #fff4e8;
+            margin-top: 69px;
+        }
+        .img_text03 .img_container01 .text .desc {
+            width: 445px;
+            height: 140px;
+            background-color: #fff4e8;
+            margin-top: 43px;
+        }
+        .img_text03 .img_container02 {
+            display: flex;
+            position: absolute;
+            bottom: -60px;
+        }
+        .img_text03 .img_container02 .img_txt01 {
+            margin-left: 169px;
+        }
+        .img_text03 .img_container02 .img_txt02 {}
+        .img_text03 .img_container02 .img_txt03 {}
+        .img_text03 .img_container02 .iT {
+            width: 128px;
+            height: 132px;
+            background-color: #ecb67c;
+            margin-right: 25px;
+        }
+        #contents {
+            height: 3650px;
+        }
+        /* 푸터 */
+        #footer {
+            height: 180px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">
+                <div class="icon1"></div>
+                <div class="icon2"></div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">products</a></li>
+                    <li><a href="#">faqs</a></li>
+                    <li><a href="#">contact us</a></li>
+                </ul>
+            </nav>
+            <div class="header_icon">
+                <div class="icon01 ico"></div>
+                <div class="icon02 ico"></div>
+                <div class="icon03 ico"></div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <main id="contents">
+            <div class="contents_bg">
+                <h2>Modern Furniture For<br>Modern Living Style</h2>
+                <p> In unfeeling existence objection immediate repulsive on he in. Imprudence comparison uncommonly me he difficulty diminution resolution. Likewise proposal differed scarcely dwelling as on raillery. 
+                    <br><br>
+                    September few dependent extremity own continued and ten prevailed attending. Early to weeks we could. Do commanded an shameless we disposing do. Indulgence ten remarkably nor are impression out. Power is lived means oh every in we quiet.</p>
+                <div class="contents_box">
+                    <div class="box1">Request a Quote</div>
+                    <div class="box2">Watch Video</div>
+                </div>
+                <div class="contents_txt">SOME OF OUR TRUSTED CLIENTS</div>
+                <div class="contents_icon">
+                    <div class="icon01 ico"></div>
+                    <div class="icon02 ico"></div>
+                    <div class="icon03 ico"></div>
+                    <div class="icon04 ico"></div>
+                    <div class="icon05 ico"></div>
+                    <div class="icon06 ico"></div>
+                </div>
+            </div>
+            <!-- //contents_bg -->
+
+        </main>
+        <!-- //contents -->
+        <!-- //img_text03 -->
+
+        <footer id="footer">
+            
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>
