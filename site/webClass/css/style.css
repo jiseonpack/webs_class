@@ -778,34 +778,32 @@
     left: 0;
     top: 7px;
 }
-.member-form .list2 {
+.member-form h4 {
+    margin: 30px 0 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-position: under;
+    line-height: 1.6;
+}
+.member-form .info {
     width: 550px;
     background: #f5f5f5;
     padding: 20px;
     font-size: 14px;
     line-height: 1.6;
 }
-.member-form .list2 li {
-    font-size: 14px;
-    line-height: 1.6;
+
+.member-form .info li {
     position: relative;
-    padding-left: 20px;
+    padding-left: 10px;
 }
-.member-form .list2 li::before {
+.member-form .info li::before {
     content: '';
-    width: 3px;
-    height: 3px;
+    position: absolute;
+    left: 0; top: 7px;
+    width: 3px; height: 3px;
     background: #000;
     border-radius: 50%;
-    position: absolute;
-    left: 10px;
-    top: 7px;
-}
-.member-form h4 {
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 30px;
-    margin-bottom: 5px;
-    text-decoration: underline;
 }
 
