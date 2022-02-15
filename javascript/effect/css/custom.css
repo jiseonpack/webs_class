@@ -14,12 +14,12 @@ li {
 }
 img {
     width: 100%;
-    vertical-align: top; /* 이미지 여백 제거 */
+    vertical-align: top; /*이미지 여백 제거*/
 }
 body {
     width: 100%;
     height: 100vh;
-    background-image: url(../img/img01.jpg);
+    background: url(../img/img01.jpg);
     background-size: cover;
     background-position: center center;
     overflow: hidden;
@@ -32,24 +32,24 @@ body::before {
     top: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(16, 32, 61, 0.5);
+    background: rgba(22,25,28,0.7);
     z-index: -1;
 }
-/* info */
+/*info*/
 .title {
     position: absolute;
     left: 20px;
     top: 20px;
 }
 .title h1 {
-    font-size: 30px;
+    font-size: 34px;
     border-bottom: 1px dashed #fff;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     padding-bottom: 5px;
-    font-weight: 500;
+    letter-spacing: 2px;
 }
 .title p {
-    font-size: 16px;
+    font-size: 18px;
 }
 .number {
     position: absolute;
@@ -63,13 +63,16 @@ body::before {
     display: inline-block;
     width: 30px;
     height: 30px;
-    border: 1px dashed #fff;
-    border-radius: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
     text-align: center;
     line-height: 30px;
     font-size: 12px;
 }
-.number li a:hover,
+.number li a:hover {
+    background: #fff;
+    color: #000;
+}
 .number li.active a {
     background: #fff;
     color: #000;
@@ -92,9 +95,9 @@ body::before {
 }
 .source button:hover {
     background: #fff;
-    color: #000
+    color: #000;
 }
-/* modal */
+/*modal*/
 #modal {
     position: fixed;
     left: 0;
@@ -109,109 +112,113 @@ body::before {
     animation: foldOut 1s ease forwards;
 }
 #modal.show.hide {
-    animation: foldIn 1s 0.3s ease backwards;
-}
+    animation: foldIn 1s 0.3s ease backwards;    
+}       
 .modal-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    transform: scale(0)
+    transform: scale(0);
 }
 #modal.show .modal-wrap {
     animation: zoomOut 0.5s 1s ease forwards;
 }
 #modal.show.hide .modal-wrap {
-    animation: zoomIn 0.5s ease forwards;
+    animation: zoomIn 0.5s  ease forwards;
 }
 @keyframes foldOut {
-    0%   {transform: scaleX(0) scaleY(0.005)}
-    50%  {transform: scaleX(1) scaleY(0.005)}
+    0% {transform: scaleX(0) scaleY(0.005)}
+    50% {transform: scaleX(1) scaleY(0.005)}
     100% {transform: scaleX(1) scaleY(1)}
 }
 @keyframes foldIn {
-    0%   {transform: scaleX(1) scaleY(1)}
-    50%  {transform: scaleX(1) scaleY(0.005)}
+    0% {transform: scaleX(1) scaleY(1)}
+    50% {transform: scaleX(1) scaleY(0.005)}
     100% {transform: scaleX(0) scaleY(0.005)}
 }
 @keyframes zoomOut {
-    0%   {transform: scale(0)}
+    0% {transform: scale(0)}
     100% {transform: scale(1)}
 }
 @keyframes zoomIn {
-    0%   {transform: scale(1)}
+    0% {transform: scale(1)}
     100% {transform: scale(0)}
 }
 .modal-close {
     margin-top: 10px;
 }
-.modal-cont {
+.modal-cont {           
     opacity: 1;
     position: relative;
-}
+}                               
 .code-view {
     width: 60vw;
     height: 60vh;
     background: #fff;
-    border: 1px solid #F2F2F2;
-    border-radius: 5px;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
     overflow: scroll;
     overflow-x: hidden;
 }
+.code-view::-webkit-scrollbar {                
+        display: none; /*나중에 필요하면 스크롤바 디자인 찾아보기*/
+}
 .view-header {
+    padding: 7px 0 7px 10px;
+    border-bottom: 1px solid #e2e8f0;
     position: absolute;
-    left: 0; top: 0;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 32px;
     background: #fff;
-    padding: 7px 0 7px 10px;
-    border-bottom: 1px solid #eee;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px  5px 0 0;
 }
 .view-header > span {
     width: 10px;
     height: 10px;
     display: inline-block;
     border-radius: 10px;
-}    
+}
 .view-header > span:nth-child(1) {
-    background-color: #F56565;
+    background-color: #f56565;
 }
 .view-header > span:nth-child(2) {
-    background-color: #F6E05E;
+    background-color: #f6e05e;
 }
 .view-header > span:nth-child(3) {
-    background-color: #4EBB7B;
+    background-color: #48bb78;
 }
 .view-title {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 9px 10px 7px 10px;
+    height: 38px;
     position: absolute;
     left: 0;
     top: 32px;
     width: 100%;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    padding: 9px 0 7px;
-    height: 37px;
+    background: #fff;            
 }
 .view-title li {
     display: inline;
 }
 .view-title li a {
-    color: rgb(150, 150, 150);
-    font-size: 14px;
+    color: rgb(151, 151, 151);
+    font-size: 16px;
     text-transform: uppercase;
     padding: 12px 20px 8px 20px;
-    margin: 2px 0 0 0;
+    margin: 2px 0px 0px 0px;
 }
 .view-title li.active a {
     color: #000;
-    background: #DCDCE4;
+    border-bottom: 3px solid #61aeee;
 }
 .view-cont {
-    background-color: #282936;
     height: 100%;
-    padding-top: 65px;
+    background: #282c34;
+    padding-top: 40px;
 }
 .view-cont > div {
     display: none;
