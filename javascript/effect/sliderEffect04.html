@@ -231,36 +231,34 @@ setInterval(sliderEffect, 2000); </code></pre>
         tabMenu();
 
         // slider04
-        const sliderWrap = document.querySelector(".slider__wrap");      //sliderWrap에 div 태그 .slider__wrap 저장
-        const sliderImg = document.querySelector(".slider__img");        //sliderImg에 div 태그 .slider_img 저장, 이미지 한 칸만 보이는 영역
-        const sliderInner = document.querySelector(".slider__inner");    //이미지 움직이는 영역
-        const slider = document.querySelectorAll(".slider");             //slider에 div 태그 .slider (최종적으로 이미지를 담는 다섯개의 div)
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = document.querySelector(".slider__img");       // 이미지 보이는 영역
+        const sliderInner = document.querySelector(".slider__inner");   // 이미지 움직이는 구간
+        const slider = document.querySelectorAll(".slider");            // 5개의 이미지
 
-        //.slider__inner > div:first-child
         let currentIndex = 0;
-        let sliderCount = slider.length;    //이미지 갯수
-        let sliderHeight = sliderImg.offsetHeight;    //이미지 세로 값
-        let sliderClone = sliderInner.firstElementChild.cloneNode(true);    //첫번째 이미지 복사
-        sliderInner.appendChild(sliderClone);   //첫번째 이미지를 마지막에 넣어줌
+        let sliderCount = slider.length;                  // 이미지 갯수
+        let sliderHeight = sliderImg.offsetHeight     // sliderImg의 width 값 가져오기
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true);        // 첫 번째 이미지 복사
+        sliderInner.appendChild(sliderClone);       // 첫 번째 이미지를 마지막에 넣어줌
 
-        function sliderEffect(){
-            console.log(sliderHeight*currentIndex);
-            currentIndex++;     //sliderEffect함수가 실행할 때 마다 index값 1 증가
-            sliderInner.style.transition = "all 0.3s";      //sliderInner의 움직임을 0.3초 동안으로 설정
-            sliderInner.style.transform = `translateY(-${sliderHeight*currentIndex}px)`;     //sliderInner를 x축으로 -sliderWidth(-800px)*currentIndex픽셀만큼 바꾼다.
+        function sliderEffect(){            // sliderEffect 함수를 만든다.
+            currentIndex++;                 // currentIndex를 1씩 증가시킴
+            sliderInner.style.transition = "all 0.3s"       // sliderInner에 transition 효과
+            sliderInner.style.transform = "translateY(-"+ sliderHeight * currentIndex +"px)" // sliderInner에 transform 효과
 
-            //마지막 사진에 갔을때
-            if(currentIndex == sliderCount){    //인덱스 값이 증가하다가 sliderCount(slider의 길이)와 같아지면
-                //setTimeout() 메서드는 만료된 후 함수나 지정한 코드 조각을 실행하는 타이머를 설정합니다.
-                setTimeout(()=>{    
-                    //이미지 초기화
-                    sliderInner.style.transition = "0s";    //이미지 전환 시간을 0으로 바꿔 초기화가 자연스럽게 이루어지게 한다.
-                    sliderInner.style.transform = 'translateY(0)';  //이미지의 위치 값을 0으로 바꿈(제일 처음 이미지로 온다.)
-                }, 300);    //함수 지연시간을 transition의 움직인 시간 0.3초와 맞춰 자연스럽게 이미지초기화/전환이 이어게 한다.
-                currentIndex = 0;   //인덱스 값 초기화
+            // 마지막 사진에 갔을 때
+            if(currentIndex==sliderCount){      // currentIndex값이 sliderCount 가 되면
+                setTimeout(()=>{                // 일정 시간이 지난 후에 함수 실행
+
+                // 초기화 시켜주기 위한 효과들
+                sliderInner.style.transition = "0s"     
+                sliderInner.style.transform = "translateX(0)"
+                }, 300)
+                currentIndex=0;
             }
         }
-        setInterval(sliderEffect, 2000);    //2초마다 sliderEffect함수를 실행시켜주는 setInterval메소드
+        setInterval(sliderEffect, 2000);  
     </script>
 
 
