@@ -119,21 +119,21 @@
                             <div class="view-cont">
                                 <div>
 <pre><code class="language-html">&lt;main&gt;
-    &lt;section id="sliderType03"&gt;
+    &lt;section id="sliderType04"&gt;
         &lt;div class="slider__wrap"&gt;
             &lt;div class="slider__img"&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/img11.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/img12.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/img13.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/img14.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/img15.jpg" alt="이미지5"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img02.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img03.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img04.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img05.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img06.jpg" alt="이미지5"&gt;&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/section&gt;
 &lt;/main&gt;</code></pre>
                                 </div>
                                 <div>
-<pre><code class="language-css">/* slider03 */
+<pre><code class="language-css">/* slider04 */
 
 .slider__wrap {
     display: flex;
@@ -147,12 +147,11 @@
     overflow: hidden;
 }
 .slider__inner {     /* 이미지 움직이는 영역 */
-    display: flex;
-    width: 4800px;          /* 이미지 총 길이*/
-    transform: translateX(0);     
+    height: 2880px;          /* 이미지 총 길이*/
+    transform: translateY(0);     
 }
 .slider {
-    width: 800px;
+    height: 480px;
     position: relative;
 }
 .slider::before {
@@ -169,39 +168,39 @@
 .slider:nth-child(3)::before {content: '이미지3';}
 .slider:nth-child(4)::before {content: '이미지4';}
 .slider:nth-child(5)::before {content: '이미지5';}
-.slider:nth-child(6)::before {content: '이미지1';}
 </code></pre>
 
                                 </div>
                                 <div>
-<pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider__wrap");
-const sliderImg = document.querySelector(".slider__img");       //이미지 보이는 영역
-const sliderInner = document.querySelector(".slider__inner");   //이미지 움직이는 영역
-const slider = document.querySelectorAll(".slider");            //5개의 이미지 저장
+<pre><code class="language-javascript">// slider04
+const sliderWrap = document.querySelector(".slider__wrap");
+const sliderImg = document.querySelector(".slider__img");       // 이미지 보이는 영역
+const sliderInner = document.querySelector(".slider__inner");   // 이미지 움직이는 구간
+const slider = document.querySelectorAll(".slider");            // 5개의 이미지
 
-let currentIndex = 0;                                                //첫 번째 이미지(현재 보이는 이미지)
-let sliderCount = slider.length;                                     //이미지 갯수
-let sliderWidth = sliderImg.offsetWidth;                             //이미지 가로 값
-let sliderClone = sliderInner.firstElementChild.cloneNode(true);     //첫번째 이미지 복사
-sliderInner.appendChild(sliderClone);                                //첫번째 이미지를 마지막에 넣어줌
+let currentIndex = 0;
+let sliderCount = slider.length;                  // 이미지 갯수
+let sliderHeight = sliderImg.offsetHeight     // sliderImg의 width 값 가져오기
+let sliderClone = sliderInner.firstElementChild.cloneNode(true);        // 첫 번째 이미지 복사
+sliderInner.appendChild(sliderClone);       // 첫 번째 이미지를 마지막에 넣어줌
 
-function sliderEffect(){
-    currentIndex++;
-    sliderInner.style.transition = "all 0.3s";
-    sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex +"px)";
+function sliderEffect(){            // sliderEffect 함수를 만든다.
+    currentIndex++;                 // currentIndex를 1씩 증가시킴
+    sliderInner.style.transition = "all 0.3s"       // sliderInner에 transition 효과
+    sliderInner.style.transform = "translateY(-"+ sliderHeight * currentIndex +"px)" // sliderInner에 transform 효과
 
-    //마지막 사진에 갔을 때
-    if(currentIndex == sliderCount){
-        setTimeout(() => {
-        sliderInner.style.transition = "0s";                //시간 초기화
-        sliderInner.style.transform = "translateX(0px)"     //움직임 초기화
-        }, 300);
+    // 마지막 사진에 갔을 때
+    if(currentIndex==sliderCount){      // currentIndex값이 sliderCount 가 되면
+        setTimeout(()=>{                // 일정 시간이 지난 후에 함수 실행
 
-        currentIndex = 0;
+        // 초기화 시켜주기 위한 효과들
+        sliderInner.style.transition = "0s"     
+        sliderInner.style.transform = "translateX(0)"
+        }, 300)
+        currentIndex=0;
     }
-
 }
-setInterval(sliderEffect, 2000);</code></pre>
+setInterval(sliderEffect, 2000); </code></pre>
 
                                 </div>
                                 <div>

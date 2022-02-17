@@ -18,7 +18,6 @@
         @import url(css/custom.css);
 
         /* slider05 */
-
         .slider__wrap {
             display: flex;
             align-items: center;
@@ -149,22 +148,21 @@
                             <div class="view-cont">
                                 <div>
 <pre><code class="language-html">&lt;main&gt;
-    &lt;section id="sliderType03"&gt;
+    &lt;section id="sliderType05"&gt;
         &lt;div class="slider__wrap"&gt;
             &lt;div class="slider__img"&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/img11.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/img12.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/img13.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/img14.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/img15.jpg" alt="이미지5"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img05.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img06.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img07.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img08.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img09.jpg" alt="이미지5"&gt;&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/section&gt;
 &lt;/main&gt;</code></pre>
                                 </div>
                                 <div>
-<pre><code class="language-css">/* slider03 */
-
+<pre><code class="language-css">/* slider05 */
 .slider__wrap {
     display: flex;
     align-items: center;
@@ -193,45 +191,73 @@
     color: #fff;
     padding: 5px 10px 3px;
 }
-
 .slider:nth-child(1)::before {content: '이미지1';}
 .slider:nth-child(2)::before {content: '이미지2';}
 .slider:nth-child(3)::before {content: '이미지3';}
 .slider:nth-child(4)::before {content: '이미지4';}
 .slider:nth-child(5)::before {content: '이미지5';}
-.slider:nth-child(6)::before {content: '이미지1';}
+
+/* 버튼 */
+.slider__btn a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background: rgb(0,0,0,0.4);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: all 0.2s;
+    line-height: 50px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+.slider__btn a.prev {
+    left: 0;
+}
+.slider__btn a.next {
+    right: 0;
+}
+.slider__btn a:hover{
+    background: rgb(241, 96, 86);
+}
 </code></pre>
 
                                 </div>
                                 <div>
-<pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider__wrap");
-const sliderImg = document.querySelector(".slider__img");       //이미지 보이는 영역
-const sliderInner = document.querySelector(".slider__inner");   //이미지 움직이는 영역
-const slider = document.querySelectorAll(".slider");            //5개의 이미지 저장
+<pre><code class="language-javascript"> // slider05
+const sliderWrap = document.querySelector(".slider__wrap");      //sliderWrap에 div 태그 .slider__wrap 저장
+const sliderImg = document.querySelector(".slider__img");        //sliderImg에 div 태그 .slider_img 저장, 이미지 한 칸만 보이는 영역
+const sliderInner = document.querySelector(".slider__inner");    //이미지 움직이는 영역
+const slider = document.querySelectorAll(".slider");             //slider에 div 태그 .slider (최종적으로 이미지를 담는 다섯개의 div)
+const sliderBtn = document.querySelector(".slider__btn");
+const sliderBtnPrev = sliderBtn.querySelector(".prev");
+const sliderBtnNext = sliderBtn.querySelector(".next");
 
-let currentIndex = 0;                                                //첫 번째 이미지(현재 보이는 이미지)
-let sliderCount = slider.length;                                     //이미지 갯수
-let sliderWidth = sliderImg.offsetWidth;                             //이미지 가로 값
-let sliderClone = sliderInner.firstElementChild.cloneNode(true);     //첫번째 이미지 복사
-sliderInner.appendChild(sliderClone);                                //첫번째 이미지를 마지막에 넣어줌
+let currentIndex = 0;
+let sliderCount = slider.length;    //이미지 갯수
+let sliderWidth = sliderImg.offsetWidth;    //이미지 가로 값
 
-function sliderEffect(){
-    currentIndex++;
-    sliderInner.style.transition = "all 0.3s";
-    sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex +"px)";
-
-    //마지막 사진에 갔을 때
-    if(currentIndex == sliderCount){
-        setTimeout(() => {
-        sliderInner.style.transition = "0s";                //시간 초기화
-        sliderInner.style.transform = "translateX(0px)"     //움직임 초기화
-        }, 300);
-
-        currentIndex = 0;
-    }
-
+function gotoSlider(num){
+    sliderInner.style.transition = "all 400ms";     //0.4초
+    sliderInner.style.transform = `translateX(-${sliderWidth * num}px)`;
+    currentIndex = num;
 }
-setInterval(sliderEffect, 2000);</code></pre>
+
+sliderBtnPrev.addEventListener("click", () => {
+    let prevIndex = (currentIndex + (sliderCount -1)) % sliderCount;
+    //첫번째 있을 때 0--> 4
+    // if( currentIndex == 0 ) prevIndex = sliderCount -1;
+    // 0 1 2 3 4
+    gotoSlider(prevIndex);
+})
+
+sliderBtnNext.addEventListener("click", () => {
+    let nextIndex = (currentIndex + 1) % sliderCount;
+    //이미지 총 갯수 이상 넘어가지 X 
+    gotoSlider(nextIndex);
+})</code></pre>
 
                                 </div>
                                 <div>
