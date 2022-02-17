@@ -30,10 +30,13 @@ body.img03 {
     background-image: url(../img/img11.jpg);
 }
 body.img04 {
-    background-image: url(../img/img04.jpg);
+    background-image: url(../img/img02.jpg);
 }
 body.img05 {
     background-image: url(../img/img05.jpg);
+}
+body.img06 {
+    background-image: url(../img/img07.jpg);
 }
 img {
     width: 100%;
