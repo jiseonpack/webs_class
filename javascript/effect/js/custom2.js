@@ -1,6 +1,4 @@
-
-        
-
+  
 //highlight
 const highlight = function(){
     hljs.highlightAll()
