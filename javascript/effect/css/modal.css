@@ -5,19 +5,19 @@
     bottom: 10vh;
 }
 .source button {
-    border: 3px solid #000;
-    background: transparent;
+    border: 2px solid #858585;
+    background: #cacaca;
     font-family: 'DungGeunMo';
     color: #000;
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px 30px;
-    border-radius: 50px;
+    border-radius: 10px;
     transition: all 0.2s;
     cursor: pointer;
 }
 .source button:hover {
-    background: #fff;
-    color: #000;
+    background: #858585;
+    color: #5cfa47;
 }
 #modal {
     position: fixed;
