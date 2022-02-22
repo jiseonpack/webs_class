@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout08</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #daf7f8;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #b9f6f8;
+        }
+        #main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 30%;
+            height: 600px;
+            background-color: #82f4f8;
+        }
+        #article1 {
+            width: 70%;
+            height: 200px;
+            background-color: #4ac0c4;
+        }
+        #article2 {
+            width: 70%;
+            height: 200px;
+            background-color: #3ea2a5;
+        }
+        #article3 {
+            width: 70%;
+            height: 200px;
+            background-color: #358c8f;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #05b8be;
+        }
+        @media (max-width: 1220px){
+            #wrap {
+                width: 96%;              
+            }
+            #main {
+
+            }
+            #aside {
+                height: 500px;
+            }
+            #article1 {
+                height: 250px;
+            }
+            #article2 {
+                height: 250px;
+            }
+            #article3 {
+                width: 100%;
+                height: 100px;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;              
+            } 
+
+        }
+        @media (max-width: 600px){
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <header id="header"></header>
+    <nav id="nav"></nav>
+    <main id="main">
+        <aside id="aside"></aside>
+        <article id="article1"></article>
+        <article id="article2"></article>
+        <article id="article3"></article>
+    </main>
+    <footer id="footer"></footer>
+</body>
+</html>

@@ -100,33 +100,36 @@
             opacity: 0.5;
         }
         #footer {
-            margin-top: 133px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
             width: 100%;
-            background: #4a4a4a;
+            background: #262626;
             text-align: center;
             padding: 20px;
         }
         #footer a {
-            color: #fff;
+            color: #ebb1d9;
             font-size: 16px;
         }
 
-         /* quiz__wrap */
-         .quiz__wrap {
+        /* quiz__wrap */
+        .quiz__wrap {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
             margin-top: 150px;
         }
+
         .quiz {
             max-width: 500px;
             width: 100%;
             background: #fff;
             border: 8px ridge #cacaca;
+            flex-wrap: wrap;
             margin: 10px;
         }
-        .quiz__type {
+        .quiz__Type {
             background: #cacaca;
             text-align: center;
             font-size: 14px;
@@ -135,30 +138,30 @@
             padding: 3px 0;
             position: relative;
         }
-        .quiz__type::before {
-            content: '';
-            position: absolute;
-            left: 2px;
-            top: 2px;
-            width: 15px;
-            height: 15px;
-            border: 6px ridge #cacaca;
-        }
-        .quiz__type::after {
-            content: '';
-            position: absolute;
-            right: 2px;
-            top: 2px;
-            width: 15px;
-            height: 15px;
-            border: 6px ridge #cacaca;
-        }
         .quiz__question {
             border-top: 6px ridge #cacaca;
             border-bottom: 6px ridge #cacaca;
             padding: 13px 30px;
             font-size: 24px;
-            line-height: 1.4; 
+            line-height: 1.4
+        }
+        .quiz__Type::before {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 5px;
+            height: 5px;
+            border: 6px ridge #cacaca;
+        }
+        .quiz__Type::after {
+            content: '';
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            width: 5px;
+            height: 5px;
+            border: 6px ridge #cacaca;
         }
         .quiz__number {
             font-family: 'Cafe24Dangdanghae';
@@ -175,28 +178,28 @@
             position: absolute;
             left: 70%;
             top: 100px;
-            width: 120px; 
-            height: 120px;
+            width: 100px;
+            height: 100px;
+            background: #f5534f;
             border-radius: 50%;
             z-index: 100;
-            line-height: 120px;
+            line-height: 100px;
             text-align: center;
             color: #fff;
-            background-color: #F5534F;
             opacity: 0;
         }
         .quiz__view .false {
             position: absolute;
             right: 70%;
             top: 100px;
-            width: 120px; 
-            height: 120px;
+            width: 100px;
+            height: 100px;
             background: #fff;
             border-radius: 50%;
             z-index: 100;
-            line-height: 120px;
+            line-height: 100px;
             text-align: center;
-            color: #F5534F;
+            color: #f5534f;
             opacity: 0;
         }
         .quiz__view.like .true {
@@ -208,12 +211,12 @@
             animation: wobble 0.6s;
         }
         @keyframes wobble {
-            0%   {transform: translateZ(0)}
-            15%  {transform: translate3d(-25%, 0, 0) rotate(-5deg)}
-            30%  {transform: translate3d(20%, 0, 0) rotate(3deg)}
-            45%  {transform: translate3d(-15%, 0, 0) rotate(-3deg)}
-            60%  {transform: translate3d(10%, 0, 0) rotate(2deg)}
-            75%  {transform: translate3d(-5%, 0, 0) rotate(-1deg)}
+            0% {transform: translateZ(0)}
+            15% {transform: translate3d(-25%, 0, 0) rotate(-5deg)}
+            30% {transform: translate3d(20%, 0, 0) rotate(3deg)}
+            45% {transform: translate3d(-15%, 0, 0) rotate(-3deg)}
+            60% {transform: translate3d(10%, 0, 0) rotate(2deg)}
+            75% {transform: translate3d(-5%, 0, 0) rotate(-1deg)}
             100% {transform: translateZ(0)}
         }
         .quiz__answer {
@@ -227,7 +230,6 @@
             font-size: 22px;
             padding: 13px 20px;
             background: #d6d6d6;
-            font-family: 'Cafe24Dangdanghae';
             text-shadow: 1px 1px 1px #fff;
             transition: all 0.3s;
             cursor: pointer;
@@ -236,26 +238,27 @@
             background: #b3b3b3;
         }
         .quiz__result {
-            text-align: center;
             border: 6px ridge #cacaca;
             width: 100%;
             font-size: 22px;
             padding: 13px 20px;
             background: #fff;
-            font-family: 'Cafe24Dangdanghae';
+            text-align: center;
             text-shadow: 1px 1px 1px #fff;
-            /* display: none; */
+            font-family: 'Cafe24Dangdanghae';
+            display: none;
         }
         .quiz__input {
-            width: 100%;
             border: 6px ridge #cacaca;
+            width: 100%;
             font-size: 22px;
             padding: 13px 20px;
             background: #fff;
-            font-family: 'Cafe24Dangdanghae';
+            text-align: left;
             text-shadow: 1px 1px 1px #fff;
+            font-family: 'Cafe24Dangdanghae';
             margin-bottom: 10px;
-        }       
+        }        
     </style>
 </head>
 <body>
@@ -329,7 +332,7 @@
                                     <div class="symbol"></div>
                                 </div>
                             </div>
-                            <div class="menu-bar"><span class="active">HTML</span><span>CSS</span><span>Javascript</span><span>jQuery</span></div>
+                            <div class="menu-bar"><span class="active">HTML</span><span>CSS</span><span>Javascript</span></div>
                         </div>                        
                         <div class="content-container">
                             <div class="content">
@@ -463,6 +466,23 @@
         color: #f5534f;
         opacity: 0;
     }
+    .quiz__view.like .true {
+        opacity: 1;
+        animation: wobble 0.6s;
+    }
+    .quiz__view.dislike .false {
+        opacity: 1;
+        animation: wobble 0.6s;
+    }
+    @keyframes wobble {
+        0% {transform: translateZ(0)}
+        15% {transform: translate3d(-25%, 0, 0) rotate(-5deg)}
+        30% {transform: translate3d(20%, 0, 0) rotate(3deg)}
+        45% {transform: translate3d(-15%, 0, 0) rotate(-3deg)}
+        60% {transform: translate3d(10%, 0, 0) rotate(2deg)}
+        75% {transform: translate3d(-5%, 0, 0) rotate(-1deg)}
+        100% {transform: translateZ(0)}
+    }
     .quiz__answer {
         background-color: #f5f5f5;
         border-top: 6px ridge #cacaca;
@@ -505,16 +525,16 @@
     }</code></pre>
                                 </div>
                                 <div>
-<pre><code class="language-javascript">const quizType = document.querySelector(".quiz__Type")          //퀴즈 종류
+<pre><code class="language-javascript">&lt;script&gt;
+    const quizType = document.querySelector(".quiz__Type")          //퀴즈 종류
     const quizNumber = document.querySelector(".quiz__number")      //퀴즈 번호
     const quizAsk = document.querySelector(".quiz__ask")            //퀴즈 질문
     const quizConfirm = document.querySelector(".quiz__confirm")    //정답 확인 버튼
     const quizResult = document.querySelector(".quiz__result")      //정답 결과
-    const quizDog = document.querySelector(".dog")
-    const quizInput = document.querySelector(".quiz__input")
-    const quizView = document.querySelectorAll(".quiz__view > div")
-    const quizTure = document.querySelector(".quiz__view .true")
-    const quizFalse = document.querySelector(".quiz__view .false")
+    const quizDog = document.querySelector(".dog")                  //강아지
+    const quizInput = document.querySelector(".quiz__input")        //input박스
+    const quizView = document.querySelector(".quiz__view")
+
     //문제 정보
     const answerType = "javascript"
     const answerNum = 1;
@@ -525,30 +545,29 @@
     quizType.textContent = answerType;
     quizNumber.textContent = answerNum + ". ";
     quizAsk.textContent = answerAsk;
-    quizResult.textContent = answerResult;
+    quizResult.textContent = "정답은 : " + answerResult + " 입니다.";
+
+    //정답 숨기기
+    quizResult.style.display = "none";
 
     //정답확인
+    //정답 버튼을 클릭하면 정답 확인은 안보이게 숨겨진 정답은 보이게
     quizConfirm.addEventListener("click", () => {
         quizConfirm.style.display = "none";
         quizResult.style.display = "block";
-    })
+    });
 
-    //정답일 경우 강아지가 웃고 틀릴경우 강아지가 울게
     quizConfirm.addEventListener("click", () => {
-        const answerWord = quizInput.value;
+        const answerWord = quizInput.value.toLowerCase().trim();    //사용자가 입력한 데이터
         if(answerWord == answerResult){
-            quizDog.classList.add("like"),
-            quizTure.style.opacity = "1";
+            quizView.classList.add("like");
+            quizResult.style.display = "none";
         } else {
-            quizDog.classList.add("dislike"),
-            quizFalse.style.opacity = "1";
+            quizView.classList.add("dislike");
+            quizInput.style.display = "none";
         }
-    })</code></pre>
-                                </div>
-                                <div>
-<pre><code class="language-javascript">
-
-</code></pre>
+    });
+&lt;/script&gt;</code></pre>
                                 </div>
                             </div>
                                 </div>
@@ -583,15 +602,13 @@
         const quizAsk = document.querySelector(".quiz__ask")            //퀴즈 질문
         const quizConfirm = document.querySelector(".quiz__confirm")    //정답 확인 버튼
         const quizResult = document.querySelector(".quiz__result")      //정답 결과
-        const quizDog = document.querySelector(".dog")
-        const quizInput = document.querySelector(".quiz__input")
-        const quizView = document.querySelectorAll(".quiz__view > div")
-        const quizTure = document.querySelector(".quiz__view .true")
-        const quizFalse = document.querySelector(".quiz__view .false")
-        
+        const quizDog = document.querySelector(".dog")                  //강아지
+        const quizInput = document.querySelector(".quiz__input")        //input박스
+        const quizView = document.querySelector(".quiz__view")
+
         //문제 정보
         const answerType = "javascript"
-        const answerNum = 2;
+        const answerNum = 1;
         const answerAsk = "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?";
         const answerResult = "javascript";
 
@@ -599,9 +616,9 @@
         quizType.textContent = answerType;
         quizNumber.textContent = answerNum + ". ";
         quizAsk.textContent = answerAsk;
-        quizResult.textContent = answerResult;
+        quizResult.textContent = "정답은 : " + answerResult + " 입니다.";
 
-        //정답
+        //정답 숨기기
         quizResult.style.display = "none";
 
         //정답확인
@@ -609,18 +626,18 @@
         quizConfirm.addEventListener("click", () => {
             quizConfirm.style.display = "none";
             quizResult.style.display = "block";
-        })
+        });
 
         quizConfirm.addEventListener("click", () => {
-            const answerWord = quizInput.value;
+            const answerWord = quizInput.value.toLowerCase().trim();    //사용자가 입력한 데이터
             if(answerWord == answerResult){
-                quizDog.classList.add("like"),
-                quizTure.style.opacity = "1";
+                quizView.classList.add("like");
+                quizResult.style.display = "none";
             } else {
-                quizDog.classList.add("dislike"),
-                quizFalse.style.opacity = "1";
+                quizView.classList.add("dislike");
+                quizInput.style.display = "none";
             }
-        })
+        });
     </script>
 </body>
 </html>
