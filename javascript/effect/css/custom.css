@@ -38,6 +38,21 @@ body.img05 {
 body.img06 {
     background-image: url(../img/img07.jpg);
 }
+body.img07 {
+    background-image: url(../img/img09.jpg);
+}
+body.img08 {
+    background-image: url(../img/img12.jpg);
+}
+body.img09 {
+    background-image: url(../img/img13.jpg);
+}
+body.img10 {
+    background-image: url(../img/img04.jpg);
+}
+body.img11 {
+    background-image: url(../img/img16.jpg);
+}
 img {
     width: 100%;
     vertical-align: top; /* 이미지 여백 제거 */
