@@ -539,6 +539,15 @@ img {
     border-radius: 5px;
 }
 
+button {
+    border: 1px solid #cdcdcd;
+    padding: 3px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:active {
+    background: #a1a1a1;
+}
 
 /* 간격 설정 */
 .mt0 {margin-top: 0px !important;}

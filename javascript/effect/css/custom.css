@@ -53,6 +53,12 @@ body.img10 {
 body.img11 {
     background-image: url(../img/img16.jpg);
 }
+body.img12 {
+    background-image: url(../img/img17.jpg);
+}
+body.img13 {
+    background-image: url(../img/img18.jpg);
+}
 img {
     width: 100%;
     vertical-align: top; /* 이미지 여백 제거 */
