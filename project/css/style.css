@@ -227,9 +227,10 @@
 }
 .con6_text {
     font-size: 35px;
-    color: #006054;
+    color: #000000;
     padding-top: 50px;
     text-align: center;
+    font-weight: bold;
 }
 .contents .con7 {
     width: 100%;
