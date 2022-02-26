@@ -1,0 +1,121 @@
+/* 전체 레이아웃 */
+#wrap {
+    font-family: 'GowunBatang';
+    width: 1920px;
+    margin: 0 auto;
+    background-color: #ddd;
+}
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: #DBFAFC;
+}
+#header .menu {
+    
+}
+#header .menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .menu li {
+    padding: 20px 30px;
+}
+#header .menu li a {
+    color: #008E7D;
+    font-weight: bold;
+}
+#banner {
+    width: 100%;
+    height: 1080px;
+    background-color: #DBFAFC;
+    background-image: url(../img/bg.png);
+    position: relative;
+}
+#banner .b_text {
+    padding: 80px 0;
+    font-size: 40px;
+    color: #85BAB4;
+}
+#banner .b_text2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 120px;
+    color: #4CA89E;
+    font-weight: bold;
+}
+.contents .con1 {
+    width: 100%;
+    height: 785px;
+    background-color: rgb(209, 197, 197);
+}
+.contents .con2 {
+    width: 100%;
+    height: 988px;
+    background-color: rgb(180, 157, 157);
+}
+.contents .con3 {
+    width: 100%;
+    height: 960px;
+    background-color: rgb(206, 126, 126);
+}
+.contents .con4 {
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(226, 231, 154);
+}
+.contents .con5 {
+    width: 100%;
+    height: 860px;
+    background-color: rgb(172, 235, 224);
+}
+.contents .con6 {
+    width: 100%;
+    height: 450px;
+    background-color: rgb(147, 224, 140);
+}
+.contents .con7 {
+    width: 100%;
+    height: 1090px;
+    background-color: rgb(231, 168, 226);
+}
+.contents .con8 {
+    width: 100%;
+    height: 860px;
+    background-color: rgb(199, 158, 158);
+}
+.contents .con9 {
+    width: 100%;
+    height: 1004px;
+    background-color: rgb(139, 93, 93);
+}
+.contents .con10 {
+    width: 100%;
+    height: 2980px;
+    background-color: rgb(209, 197, 197);
+}
+.contents .con11 {
+    width: 100%;
+    height: 2789px;
+    background-color: rgb(214, 174, 240);
+}
+.contents .con12 {
+    width: 100%;
+    height: 758px;
+    background-color: #8EE0D6;
+}
+.contents .con13 {
+    width: 100%;
+    height: 690px;
+    background-color: rgb(209, 197, 197);
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+#footer {
+    width: 100%;
+    height: 278px;
+    background-color: #D9F5F6;
+}
