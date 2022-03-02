@@ -242,25 +242,40 @@
     background-image: url(../img/7.png);
     margin: 0 auto;
 }
-.c7_img {
+.con7_box_wrap {
+    padding-top: 41px;
     display: flex;
-    justify-content: space-between;
-    padding-top: 50px;
+    justify-content: space-between
 }
-.c7_img1 {
-    width: 380px;
-    height: 700px;
-    background-image: url(../img/7_1.png);
+
+.con7_box {
+    width: 400px;
+    height: 516px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
-.c7_img2 {
-    width: 380px;
-    height: 700px;
-    background-image: url(../img/7_2.png);
+
+.con7_box img {
+    border-radius: 25px 25px 0 0;
 }
-.c7_img3 {
-    width: 380px;
-    height: 700px;
-    background-image: url(../img/7_3.png);
+
+p.con7_box_top {
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    color: #4BA87D;
+}
+
+p.con7_box_bottom {
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+    padding: 20px;
+}
+
+.con7_box_wrap div:nth-child(2) p.strategy2_box_bottom {
+    padding: 10px 20px;
 }
 .contents .con8 {
     width: 100%;

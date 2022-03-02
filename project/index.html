@@ -24,11 +24,11 @@
         <header id="header" >
             <div class="menu">
                 <ul>    
-                    <li><a href="#">brief</a></li>
-                    <li><a href="#">diagram</a></li>
-                    <li><a href="#">user flow</a></li>
-                    <li><a href="#">video</a></li>
-                    <li><a href="#">Site</a></li>
+                    <li><a href="#con1_brief">brief</a></li>
+                    <li><a href="#con9_diagram">diagram</a></li>
+                    <li><a href="#con10_userflow">user flow</a></li>
+                    <li><a href="#con12_video">video</a></li>
+                    <li><a href="#con13_site">Site</a></li>
                 </ul>
             </nav>
         </header>
@@ -43,7 +43,7 @@
             </div>
         </section>
         <main class="contents container">
-            <div class="con1">
+            <div id="con1_brief" class="con1">
                 <div class="con1_text">
                     외적으로 꾸미고 싶고 관리 하고 싶어도<br>자신에게 맞는 피부관리, 헤어제품 등을 알기 어려우신가요?
                 </div>
@@ -110,20 +110,32 @@
             </div>
             <div class="con7">
                 <div class="con7_img1"></div>
-                <div class="c7_img">
-                    <div class="c7_img1"></div>
-                    <div class="c7_img2"></div>
-                    <div class="c7_img3"></div>
+                <div class="con7_box_wrap">
+                    <div class="con7_box">
+                        <img src="img/7_1.png" alt="">
+                        <p class="con7_box_top">사용자 니즈 맞춤 정보 전달</p>
+                        <p class="con7_box_bottom">사용자의 개인별 특성에 맞는 정보를 제공합니다.</p>
+                    </div>
+                    <div class="con7_box">
+                        <img src="img/7_2.png" alt="">
+                        <p class="con7_box_top">간편하고 깔끔한 디자인</p>
+                        <p class="con7_box_bottom">원하는 정보에 쉽게 접근할 수 있는<br>간편하고 깔끔한 디자인을 제공합니다.</p>
+                    </div>
+                    <div class="con7_box">
+                        <img src="img/7_3.png" alt="">
+                        <p class="con7_box_top">남성 화장품에 대한 지속적 관심 촉구</p>
+                        <p class="con7_box_bottom">남성 뷰티에 대한 인식개선과 관심을 도모합니다.</p>
+                    </div>
                 </div>
             </div>
             <div class="con8">
                 <div class="c8_img"></div>
                 <div class="c8_img2"></div>
             </div>
-            <div class="con9">
+            <div id="con9_diagram" class="con9">
                 <div class="c9_img"></div>
             </div>
-            <div class="con10">
+            <div id="con10_userflow" class="con10">
                 <div class="c10_text">user flow chat</div>
                 <div class="c10_img"></div>
             </div>
@@ -131,11 +143,11 @@
                 <div class="c11_text">wireframe</div>
                 <div class="c11_img"></div>
             </div>
-            <div class="con12">
+            <div id="con12_video" class="con12">
                 <div class="c12_text">VIDEO</div>
                 <div class="c12_img"></div>
             </div>
-            <div class="con13">
+            <div id="con13_site" class="con13">
                 <div class="c13_text">Go To SITE!</div>
                 <div class="c13_text2">“사이트 바로가기”</div>
                 <div class="c13_img"></div>
@@ -143,5 +155,16 @@
         </main>
         <footer id="footer"></footer>
     </div>
+    <!-- script -->
+    <script>
+        document.querySelectorAll(".menu li a").forEach(li => {
+            li.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior:"smooth"
+                })
+            })
+        })
+    </script>
 </body>
 </html>
