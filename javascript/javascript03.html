@@ -69,16 +69,16 @@
                 <li>10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</li>
                 <li>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</li>
                 <li>12. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</li>
-                <li>10. 내부 함수</li>
-                <li>11. 즉시실행 함수</li>
-                <li>12. 파라미터 함수</li>
-                <li>13. 아규먼트 함수</li>
-                <li>14. 재귀 함수</li>
-                <li>15. 콜백 함수</li>
-                <li>16. 객체생성자 함수</li>
-                <li>17. 프로토타입 함수</li>
-                <li>18. 객체 리터럴 함수</li>
-                <li>19. 클래스</li>
+                <li>13. 내부 함수</li>
+                <li>14. 즉시실행 함수</li>
+                <li>15. 파라미터 함수</li>
+                <li>16. 아규먼트 함수</li>
+                <li>17. 재귀 함수</li>
+                <li>18. 콜백 함수</li>
+                <li>19. 객체생성자 함수</li>
+                <li>20. 프로토타입 함수</li>
+                <li>21. 객체 리터럴 함수</li>
+                <li>22. 클래스</li>
             <ul>
         </ul>
     </div>
@@ -114,10 +114,10 @@ func();
             <h3>02. 익명 함수</h3>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-const func = function(){
-    document.write("함수가 실행되었습니다.");
-}
-func();
+    const func = function ( ) { //함수를 변수로 지정. 
+        document.write("함수가 실행되었습니다.");
+    }
+    func( );
 }</code></pre>
             </div>
             <div class="result">
@@ -175,15 +175,15 @@ document.write(func());
             <h3>05. 화살표 함수 : 선언적 함수</h3>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-// function func(){
-//     document.write("함수가 실행되었습니다.");
-// }
-// func();
+    // function func(){
+    //     document.write("함수가 실행되었습니다.");
+    // }
+    // func();
 
-func = () => {
-    document.write("함수가 실행되었습니다.");
-}
-func();
+    func = () => {
+        document.write("함수가 실행되었습니다.");
+    }
+    func();
 }</code></pre>
             </div>
             <div class="result">
@@ -200,15 +200,15 @@ func();
             <h3>06. 화살표 함수 : 익명 함수</h3>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-// const func = function(){
-//     document.write("함수가 실행되었습니다.");
-// }
-// func();
+    // const func = function(){
+    //     document.write("함수가 실행되었습니다.");
+    // }
+    // func();
 
-const func = () => {
-    document.write("함수가 실행되었습니다")
-}
-func();
+    const func = () => {
+        document.write("함수가 실행되었습니다")
+    }
+    func();
 }</code></pre>
             </div>
             <div class="result">
@@ -225,15 +225,10 @@ func();
             <h3>07. 화살표 함수 : 매개변수 함수</h3>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-// function func(str){
-//     document.write(str);
-// }
-// func("함수가 실행되었습니다.");
-
-func = (str) => {
-    document.write(str);
-}
-func("함수가 실행되었습니다.");
+    func = (str) => {
+        document.write(str);
+    }
+    func("함수가 실행되었습니다.");
 }</code></pre>
             </div>
             <div class="result">
@@ -247,20 +242,14 @@ func("함수가 실행되었습니다.");
 
         <!-- sample8 -->
         <div id="sample8" class="sample">
-            <h3>08. 화살표 함수 : 매개변수 함수</h3>
+            <h3>08. 화살표 함수 : 리턴값 함수</h3>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-// function func(){
-//     const str = "함수가 실행되었습니다.";
-//     return str;
-// }
-// document.write(func());
-
-func = () => {
-    const str = "함수가 실행되었습니다.";
-    return str;
-}
-document.write(func());
+    func = () => {
+        const str = "함수가 실행되었습니다.";
+        return str;
+    }
+    document.write(func());
 }</code></pre>
             </div>
             <div class="result">
@@ -297,15 +286,10 @@ document.write(func());
             <h3>10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-// function func(str){
-//     document.write(str);
-// }
-// func("함수가 실행되었습니다.");
-
-func = (str) => {
-    document.write(str);
-}
-func("함수가 실행되었습니다.");
+    const func = str => { //매개변수가 하나일 경우 괄호 생략 가능.
+        return str;        
+    }
+    document.write(func("함수가 실행되었습니다."));
 }</code></pre>
             </div>
             <div class="result">
@@ -322,15 +306,9 @@ func("함수가 실행되었습니다.");
             <h3>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</h3>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-// function func(str){
-//     document.write(str);
-// }
-// func("함수가 실행되었습니다.");
-
-func = (str) => {
-    document.write(str);
-}
-func("함수가 실행되었습니다.");
+    const func = str =>  str;                 
+    
+    document.write(func("함수가 실행되었습니다."));
 }</code></pre>
             </div>
             <div class="result">
@@ -347,15 +325,9 @@ func("함수가 실행되었습니다.");
             <h3>12. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</h3>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-// function func(str){
-//     document.write(str);
-// }
-// func("함수가 실행되었습니다.");
-
-func = (str) => {
-    document.write(str);
-}
-func("함수가 실행되었습니다.");
+    func = str =>  str;                 
+    
+    document.write(func("함수가 실행되었습니다."));
 }</code></pre>
             </div>
             <div class="result">
@@ -366,6 +338,119 @@ func("함수가 실행되었습니다.");
             </div>
         </div>
         <!-- //sample12 -->
+
+        <!-- sample13 -->
+        <div id="sample13" class="sample">
+            <h3>13. 내부 함수</h3>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(){
+        function funA(){
+            document.write("함수가 실행되었습니다.")
+        }
+        funA();
+        function funB(){
+            document.write("함수가 실행되었습니다.")
+        }
+        funB();
+    }
+    func();
+}</code></pre>
+            </div>
+            <div class="result">
+                <h4>결과보기</h4>
+                <div>
+                    함수가 실행되었습니다.<br>
+                    함수가 실행되었습니다.
+                </div>
+            </div>
+        </div>
+        <!-- //sample13 -->
+        <!-- sample14 -->
+        <div id="sample14" class="sample">
+            <h3>14. 즉시 실행 함수</h3>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    // function func(){
+    //     document.write("함수가 실행되었습니다.")
+    // }
+    // func();
+
+    (function (){
+        document.write("함수가 실행되었습니다.")
+    }());   
+
+    (() => {
+        document.write("함수가 실행되었습니다.")
+    })();          
+}</code></pre>
+            </div>
+            <div class="result">
+                <h4>결과보기</h4>
+                <div>
+                    함수가 실행되었습니다.<br>
+                    함수가 실행되었습니다.
+                </div>
+            </div>
+        </div>
+        <!-- //sample14 -->
+        <!-- sample15 -->
+        <div id="sample15" class="sample">
+            <h3>15. 파라미터 함수</h3>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(str="함수가 실행되었습니다."){
+        document.write(str);
+    }
+    func();          
+}</code></pre>
+            </div>
+            <div class="result">
+                <h4>결과보기</h4>
+                <div>
+                    함수가 실행되었습니다.
+                </div>
+            </div>
+        </div>
+        <!-- //sample15 -->
+        <!-- sample16 -->
+        <div id="sample16" class="sample">
+            <h3>16. 아규먼트 함수</h3>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(a, b){
+        document.write(arguments[0]);
+        document.write(arguments[1]);
+    }
+    func("함수가 실행되었습니다.", "함수가 실행되었습니다.")         
+}</code></pre>
+            </div>
+            <div class="result">
+                <h4>결과보기</h4>
+                <div>
+                    함수가 실행되었습니다.<br>
+                    함수가 실행되었습니다.
+                </div>
+            </div>
+        </div>
+        <!-- //sample16 -->
+        <!-- sample17 -->
+        <div id="sample17" class="sample">
+            <h3>17. 재귀 함수</h3>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+             
+}</code></pre>
+            </div>
+            <div class="result">
+                <h4>결과보기</h4>
+                <div>
+                    함수가 실행되었습니다.<br>
+                    함수가 실행되었습니다.
+                </div>
+            </div>
+        </div>
+        <!-- //sample17 -->
     </div>
     <!-- //script -->
 </main>
@@ -373,6 +458,16 @@ func("함수가 실행되었습니다.");
     <script src="assets/js/script.js"></script>
     <script src="assets/js/prism.js"></script>
 
+    <script>
+        //아규먼트 함수
+        {
+            function func(a, b){
+                document.write(arguments[0]);
+                document.write(arguments[1]);
+            }
+            func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
+        }
+    </script>
 </body>
 </html>
 

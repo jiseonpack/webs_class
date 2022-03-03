@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test4</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        body {
+            background-color: #eaf8d3;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #daf8aa;
+        }
+        #nav {
+            width: 100%;
+            height: 380px;
+            background-color: #cdf78a;
+        }
+        #contents {
+            width: 100%;
+            height: 500px;
+            background-color: #bcf561;
+            position: relative;
+        }
+        #con {
+            width: 80%;
+            height: 350px;
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        .con1,.con2,.con3,.con4,.con5,.con6,.con7,.con8,.con9,.con10 {
+            width: 160px;
+            height: 160px;
+            background-color: #98c94a;
+            border-radius: 30px;
+            margin: 5px;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #a3d651;
+        }
+        @media(max-width: 1300px){
+            #wrap {
+                width: 96%;
+            }
+            #contents {
+                position: relative;
+            }
+            #con {
+                width: 60%;
+                position: absolute;
+                top: 15%;
+                left: 20%;
+            }
+            .con1,.con2 {
+                display: none;
+            }
+        }
+        @media(max-width: 768px){
+            #wrap {
+                width: 100%;
+            }  
+            #contents {
+                position: relative;
+            }
+            #con {
+                width: 80%;
+                position: absolute;
+                top: 15%;
+                left: 10%;
+            }
+            .con1 {
+                display: inline;
+            }
+        }
+        @media(max-width: 480px){
+            #nav {
+            width: 100%;
+            height: 150px;
+            }
+            #contents {
+            width: 100%;
+            height: 600px;
+            }
+            #con {
+                width: 80%;
+                height: 400px;
+            }    
+            .con2 {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <article id="contents">
+            <section id="con">
+                <section class="con1"></section>
+                <section class="con2"></section>
+                <section class="con3"></section>
+                <section class="con4"></section>
+                <section class="con5"></section>
+                <section class="con6"></section>
+                <section class="con7"></section>
+                <section class="con8"></section>
+                <section class="con9"></section>
+                <section class="con10"></section>
+            </section>    
+        </article>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
