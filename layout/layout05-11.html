@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test5</title>
+    <style>
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 500;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+            font-display: swap;
+        }
+        body {
+            font-family: 'GmarketSans';
+        }
+        * {
+            margin: 0;
+        }
+        #wrap {
+            width: 1920px;
+            height: 831px;
+        }
+        .container {
+            /* width: 1160px; */
+            height: 591px;
+            background-color: #fff;
+            margin: 0 auto;
+            padding: 120px 0;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            /* background-color: rgb(172, 137, 137); */
+        }
+        .imgText_type01 .sub {
+            font-size: 16px;
+            font-weight: 500;
+            color: #777777;
+            border-bottom: 1px solid #777777;
+        }
+        .imgText_type01 .text{
+            margin-top: 40px;
+        }
+        .imgText_type01 .text_title {
+            font-size: 50px;
+            font-weight: 300;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+        .imgText_type01 .text_desc {
+            font-size: 18px;
+            line-height: 1.5;
+            font-weight: 300;
+            color: #67778a;
+            margin-bottom: 30px;
+            padding-right: 61px;
+        }
+        .imgText_type01 .text_more {
+            font-size: 14px;
+            font-weight: 300;
+            background: #000;
+            color: #fff;
+            padding: 10px 25px 9px 24px;
+            display: inline-block;
+        }
+        .imgText_type01 .text_more a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .img1 {
+            width: 374px;
+            height: 512px;
+            border-radius: 10px;
+            background-image: url(img/site01.png);
+            margin-top: 79px;
+            margin-right: 20px;
+            position: relative;
+        }
+        .img2 {
+            width: 373px;
+            height: 511px;
+            border-radius: 10px;
+            background-image: url(img/site02.png);
+            position: relative;
+        }
+        .img_more1 {
+            font-size: 14px;
+            font-weight: 300;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 8px 24px 7px 24px;
+            display: inline-block;
+            border-radius: 50px;
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+        }
+        .img_more2 {
+            font-size: 14px;
+            font-weight: 300;
+            background: #000;
+            color: #fff;
+            padding: 8px 24px 7px 24px;
+            display: inline-block;
+            border-radius: 50px;
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+        }
+        .img_more1 a {
+            font-weight: 300;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .img_more2 a {
+            font-weight: 300;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+        }
+        @media ( max-width: 480px ) {
+        #wrap {
+            width: 90%;
+            margin: 0 auto;
+        }    
+        .container {
+            width: 90%;
+            padding: 0;
+            margin: 0 auto;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            height: 180vh;
+        }
+        .img1 {
+            margin-bottom: 20px;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <section class="imgText_type01 container">
+            <div class="text">
+                <span class="sub">이미지 텍스트 유형01</span>
+                <h3 class="text_title">웹스토리보이<br>사이트</h3>
+                <p class="text_desc">
+                    웹디자이너,웹 퍼블리셔,프로트앤드 개발<br>
+                    자를 위한 강의 사이트입니다.
+                </p>
+                <div class="text_more">
+                    <a href="#">
+                        <span>더 많은 유형 살펴보기</span>
+                    </a>    
+                </div>
+            </div>
+            <div class="img1">
+                <div class="img_more1">
+                    <a href="#">래퍼런스 사이트</a>                  
+                </div>
+            </div>
+            <div class="img2">
+                <div class="img_more2">
+                    <a href="#">튜토리얼 사이트</a>                  
+                </div>
+            </div>
+        </section>
+        <!-- //imgText_type 01 -->
+    </div>
+</body>
+</html>
