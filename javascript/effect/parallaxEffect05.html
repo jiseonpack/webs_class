@@ -63,34 +63,6 @@
             background: #fff;
             color: #000;
         }
-        #parallax__nav {
-            position: fixed;
-            right: 20px;
-            top: -200px;
-            z-index: 1000;
-            background-color: rgba(0,0,0,0.4);
-            padding: 15px 20px;
-            border-radius: 50px;
-            transition: top 0.3s ease-in-out;
-        }
-        #parallax__nav.show {
-            top: 20px;
-        }
-        #parallax__nav li {
-            list-style: none;
-            display: inline;
-        }
-        #parallax__nav li a {
-            display: inline-block;
-            padding: 5px 20px;
-            text-align: center;
-            line-height: 30px;
-        }
-        #parallax__nav li.active a {
-            background: #fff;
-            color: #000;
-            border-radius: 30px;
-        }
         #parallax__cont {
             max-width: 1600px;
             width: 98%;
@@ -145,7 +117,7 @@
             background-position: center center;
             background-size: cover;
             filter: saturate(0%);
-            transition: all 1s;
+            /* transition: all 1s; */
         }
         .content__item__img:hover {
             filter: saturate(100%);
@@ -223,40 +195,26 @@
             line-height: 1.6;
         }
         
+       
     </style>
 </head>
 
 <body>
 
     <header id="parallax__title">
-        <h1><a href="parallaxEffect.html">JavaScript Parallax Effect03</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 숨김 메뉴</p>
+        <h1><a href="parallaxEffect.html">JavaScript Parallax Effect05</a></h1>
+        <p>패럴랙스 스크롤링 효과 - 이질감 효과</p>
         <ul>
             <li><a href="parallaxEffect01.html">1</a></li>
             <li><a href="parallaxEffect02.html">2</a></li>
-            <li class="active"><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
             <li><a href="parallaxEffect04.html">4</a></li>
-            <li><a href="parallaxEffect05.html">5</a></li>
+            <li class="active"><a href="parallaxEffect05.html">5</a></li>
             <li><a href="parallaxEffect06.html">6</a></li>
             <li><a href="parallaxEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //parallax__title -->
-
-    <nav id="parallax__nav">
-        <ul>
-            <li class="active"><a href="#section1"><span>메뉴1</span></a></li>
-            <li><a href="#section2"><span>메뉴2</span></a></li>
-            <li><a href="#section3"><span>메뉴3</span></a></li>
-            <li><a href="#section4"><span>메뉴4</span></a></li>
-            <li><a href="#section5"><span>메뉴5</span></a></li>
-            <li><a href="#section6"><span>메뉴6</span></a></li>
-            <li><a href="#section7"><span>메뉴7</span></a></li>
-            <li><a href="#section8"><span>메뉴8</span></a></li>
-            <li><a href="#section9"><span>메뉴9</span></a></li>
-        </ul>
-    </nav>
-    <!-- //parallax__nav -->
 
     <!-- main -->
     <main id="parallax__cont">
@@ -362,64 +320,23 @@
 
     <!-- script -->
     <script>
-         document.querySelectorAll("#parallax__nav li a").forEach(li => {
-            li.addEventListener("click", (e) => {
-                e.preventDefault();
-                document.querySelector(li.getAttribute("href")).scrollIntoView({
-                    behavior:"smooth"
-                })
-            })
-        })
-
-        
-        
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
-         
-            // 스크롤 값이 0보다 크면 show 클래스를 추가, 아니면 show 클래스 삭제
-            // if(scrollTop > 0){
-            //     document.querySelector("#parallax__nav").classList.add("show")
-            // } else {
-            //     document.querySelector("#parallax__nav").classList.remove("show")
-            // }
-
-
-
+      
+        function scroll(){
+            let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;     
             document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
-        })
 
-        let nowScroll = true;
-        let lastScroll = 0;
+            // const img = document.querySelector("#section1 .content__item__img")
+            // img.style.transform = "translateY("+scrollTop/10+"px)"
 
-        function scrollProgress(){
-            nowScroll = true;
+            document.querySelectorAll(".content__item").forEach(item => {
+                let target = item.querySelector(".content__item__img");
+                
+                target.style.transform = `translateY(${scrollTop/10}px)`;
+            })
 
-            setInterval(()=> {
-                if(nowScroll){
-                    nowScroll = false;
-                    hasScroll();
-                }
-            }, 300);
-
-            
-        }   
-        
-        function hasScroll(){
-            let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
-         
-            if(scrollTop < lastScroll){
-                document.querySelector("#parallax__nav").classList.add("show")
-            } else {
-                document.querySelector("#parallax__nav").classList.remove("show")
-            }
-
-            lastScroll = scrollTop;
-
-            console.log("lastScroll :" + lastScroll);
-            console.log("scrollTop :" + scrollTop);
-        }    
-
-        window.addEventListener("scroll",scrollProgress)
+            requestAnimationFrame(scroll)
+        }
+        scroll();
 
     </script>
      
