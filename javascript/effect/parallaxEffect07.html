@@ -415,7 +415,13 @@
         //만약에 reveal 클래스가 있는데
         //글씨를 span으로 감싸주고
         //글씨를 다 넣어줘야 함
-
+        // document.querySelectorAll(".content__item__desc").forEach(desc => {
+        //     let splitText = desc.innerText;
+        //     let splitWrap = splitText.split('').join("</span><span aria-hidden='ture'>");
+        //         splitWrap = "<span aria-hidden='ture'>" + splitWrap + "</span>";
+        //         desc.innerHTML = splitWrap;
+        //         desc.setAttribute("aria-label", splitText);
+        // })
         
         function scroll(){
             let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;     
