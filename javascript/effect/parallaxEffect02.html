@@ -393,7 +393,7 @@
     <!-- script -->
     <script>
 
-document.querySelectorAll("#parallax__dot a").forEach(el => {
+        document.querySelectorAll("#parallax__dot a").forEach(el => {
             el.addEventListener("click", e => {
                 e.preventDefault();
 
@@ -414,9 +414,9 @@ document.querySelectorAll("#parallax__dot a").forEach(el => {
         })
 
         window.addEventListener("scroll", () => {
-          let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
+            let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
 
-          document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
         //   for(let i=1; i<=9; i++){
         //       if(scrollTop >=document.getElementById("section"+i).offsetTop -2){
         //           document.querySelectorAll("#parallax__dot li").forEach(li => {
