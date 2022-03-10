@@ -382,20 +382,20 @@
             <section id="section8" class="content__item">
                 <span class="content__item__num">08</span>
                 <h2 class="content__item__title">Section8</h2>
-                <figure class="content__item__imgWrap">
+                <figure class="content__item__imgWrap reveal reveal-two reveal-BTT">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">자신감 있는 표정을 지으면 자신감이 생긴다.</p>
+                <p class="content__item__desc reveal reveal-two">자신감 있는 표정을 지으면 자신감이 생긴다.</p>
             </section>
             <!-- //section8 -->
 
             <section id="section9" class="content__item">
                 <span class="content__item__num">09</span>
                 <h2 class="content__item__title">Section9</h2>
-                <figure class="content__item__imgWrap">
+                <figure class="content__item__imgWrap reveal reveal-two">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">자신을 내보여라. 그러면 재능이 드러날 것이다.</p>
+                <p class="content__item__desc reveal reveal-two reveal-BTT">자신을 내보여라. 그러면 재능이 드러날 것이다.</p>
             </section>
             <!-- //section9 -->
         </div>
@@ -415,13 +415,12 @@
         //만약에 reveal 클래스가 있는데
         //글씨를 span으로 감싸주고
         //글씨를 다 넣어줘야 함
-        // document.querySelectorAll(".content__item__desc").forEach(desc => {
-        //     let splitText = desc.innerText;
-        //     let splitWrap = splitText.split('').join("</span><span aria-hidden='ture'>");
-        //         splitWrap = "<span aria-hidden='ture'>" + splitWrap + "</span>";
-        //         desc.innerHTML = splitWrap;
-        //         desc.setAttribute("aria-label", splitText);
-        // })
+        document.querySelectorAll(".content__item__desc.reveal").forEach((el,i)=>{
+            if(!(el.querySelector("span"))){
+                const text = el.innerText;
+                el.innerHTML = `<span>${text}</span>`;
+            }
+        });
         
         function scroll(){
             let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;     
