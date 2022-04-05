@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        .clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+        .wrap {
+            width: 1500px;
+            margin: 0 auto;
+        }
+        /* #header {
+            margin-top: 127px;
+            width: 100%;
+            height: 130px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #header .logo {
+            margin-left: 20px;
+            width: 150px;
+            height: 140px;
+            background-image: url(logo.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        #header .menu {}
+        #header .menu ul {
+        }
+        #header .menu ul li {
+            display: inline-block;
+            font-weight: 700;
+            margin-left: 80px;
+            font-size: 25px;
+        } */
+        #header {height: 100px;}
+        #header h1 {float: left; padding-top: 5px;}
+        #header h1 img {width: 130px;}
+        #header .nav {float: right; z-index: 100; position: relative; margin-top: 20px;}
+        #header .nav li {position: relative; float: left; width: 120px; text-align: center;}
+        #header .nav li a {display: block; padding: 20px 15px; background: #ccc; white-space: nowrap;}
+        #header .nav li a:hover {background: #ddd;}
+        #header .nav li ul.submenu {display: none; position: absolute; left: 0; top: 59px; background: #ddd;}
+        #header .nav li ul.submenu li a {padding: 10px;}
+        #header .nav li ul.submenu li a:hover {background: #999;}
+        #main {}
+        #main #banner {
+            width: 100%;
+            height: 550px;
+            background: #e8e8e8;
+            margin-bottom: 45px;
+            background-image: url(img/banner.png);
+            background-size: contain;
+        }
+        #main #cont_top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 77px;
+        }
+
+        .notice {position: relative; padding: 30px; width: 48%;}
+        .notice ul li {float: left; margin-right: 20px;}
+        .notice ul li a {font-size: 24px; color: #999; font-weight: bold;}
+        .notice ul li.active a {color: #000;}
+        .notice ul li ul {position: absolute; left: 30px; top: 70px;}
+        .notice ul li ul li {width: 95%; padding: 5px 0;}
+        .notice ul li ul li a {float: left; width: 60%; font-size: 16px; color: #333;
+            overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: normal;}
+        .notice ul li ul li span {float: right; width: 20%;}
+        .notice .more {position: absolute; right: 30px; top: 35px;}
+
+        #main #cont_top .right {
+            width: 48%;
+            height: 320px;
+            background-image: url(img/contright.png);
+            background-size: contain;
+        }
+        #main #cont_bottom {
+            width: 100%;
+            margin-bottom: 100px;
+        }
+
+        #main #cont_bottom h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        #main #cont_bottom .card_wrap {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        #main #cont_bottom .card {
+            width: 22%;
+        }
+        #main #cont_bottom .card .card_img {
+            height: 330px;
+            margin-bottom: 20px;
+        }
+
+        #main #cont_bottom .card:nth-child(1) .card_img {
+            background-image: url(img/card1.png);
+            background-size: contain;
+        }
+
+        #main #cont_bottom .card:nth-child(2) .card_img {
+            background-image: url(img/card2.png);
+            background-size: contain;
+        }
+
+        #main #cont_bottom .card:nth-child(3) .card_img {
+            background-image: url(img/card3.png);
+            background-size: contain;
+        }
+
+        #main #cont_bottom .card:nth-child(4) .card_img {
+            background-image: url(img/card4.png);
+            background-size: contain;
+        }
+        #main #cont_bottom .card .card_text {
+            font-size: 20px;
+        }
+        #footer {
+            width: 100%;
+            height: 366px;
+            border-top: 1px solid #D7D7D7;
+            padding: 50px 0;
+        }
+        #footer p{
+            font-size: 18px;
+            margin-bottom: 10px;
+            letter-spacing:-1px;
+            color: #535353;
+        }
+        #footer p span {
+            color: #e3e3e3;
+            margin: 0 5px;
+        }
+
+        #footer p:last-child {
+            margin-top: 20px;
+            color: #7E7E7E;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <header id="header" class="clearfix">
+            <h1><a href="#"><img src="../layout/img/logo.png" alt="롯데월드"></a></h1>
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">즐길거리</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">요금/우대혜택</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">참여프로그램</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이용가이드</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소통서비스</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+        <main id="main">
+            <section id="banner"></section>
+            <section id="cont_top">
+                <article class="notice">
+                    <ul class="clearfix">
+                        <li class="active"><a href="#">롯데월드 소식</a>
+                            <ul>
+                                <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">뉴스&middot;공지</a>
+                            <ul>
+                                <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="#" class="more">더보기 +</a>
+                </article>
+                <article class="right"></article>
+            </section>
+            <section id="cont_bottom">
+                <h3>특별한 경험</h3>
+                <div class="card_wrap">
+                    <div class="card">
+                        <div class="card_img"></div>
+                        <div class="card_text">연간회원안내</div>
+                    </div>
+                    <div class="card">
+                        <div class="card_img"></div>
+                        <div class="card_text">프리미엄투어</div>
+                    </div>
+                    <div class="card">
+                        <div class="card_img"></div>
+                        <div class="card_text">공연참여 프로그램</div>
+                    </div>
+                    <div class="card">
+                        <div class="card_img"></div>
+                        <div class="card_text">단체프로그램</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <p>서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드 <span>|</span> 대표자 : 박동기</p>
+            <p>사업자등록번호 : 219-85-00014 <span>|</span> 통신판매업신고번호 : 송파 제5513호 <span>|</span> 전화 : 1661-2000</p>
+            <p>COPYRIGHT 2018 LOTTEWORLD.ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../layout/js/script.js"></script>
+</body>
+</html>
