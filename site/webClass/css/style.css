@@ -165,7 +165,7 @@
 /* 배너 */
 #banner {}
 
-/*.img_type {
+/* .img_type {
     width: 100%;
     height: 700px;
      background-image: url(../img/bg01.jpg);
@@ -174,8 +174,8 @@
     background-position: center; 
     background: url(../img/bg01.jpg) no-repeat center / cover;
     
-}*/
-/* .slider {
+}
+.slider {
     position: relative;
     white-space: nowrap;
 }
