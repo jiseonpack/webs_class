@@ -447,7 +447,7 @@
             musicList.classList.remove("show");
         });
 
-        //뮤직 리스트 구현하기
+        // 뮤직 리스트 구현하기
         for(let i=0; i<allMusic.length; i++){
             let li = `
                 <li data-index="${i + 1}">
@@ -457,22 +457,23 @@
                     </div>
                     <audio class="${allMusic[i].audio}" src="songs/${allMusic[i].audio}.mp3"></audio>
                     <span id="${allMusic[i].audio}" class="audio-duration">3:36</span>
-                </li>    
+                </li>
             `;
             musicListUl.insertAdjacentHTML("beforeend", li);
 
             let liAudioDuration = musicListUl.querySelector(`#${allMusic[i].audio}`);
             let liAudio = musicListUl.querySelector(`.${allMusic[i].audio}`);
 
-            //뮤직 리스트 시간
             liAudio.addEventListener("loadeddata", () => {
                 let audioDuration = liAudio.duration;
                 let totalMin = Math.floor(audioDuration / 60);
                 let totalSec = Math.floor(audioDuration % 60);
+                
                 if(totalSec < 10) totalSec = `0${totalSec}`;
                 liAudioDuration.innerText = `${totalMin}:${totalSec}`;
+                liAudioDuration.setAttribute("data-duration", `${totalMin}:${totalSec}`);
             });
-        };
+        }
 
         //뮤직 리스트 클릭하기
         function playListMusic(){
@@ -483,16 +484,20 @@
 
                 if(musicListAll[j].classList.contains("playing")){
                     musicListAll[j].classList.remove("playing");
+                    let adDuration = audioTag.getAttribute("data-duration");
+                    audioTag.innerText = adDuration
                 }
 
                 if(musicListAll[j].getAttribute("data-index") == musicIndex){
                     musicListAll[j].classList.add("playing");
+                    audioTag.innerText ="재생중";
                 }
 
                 musicListAll[j].setAttribute("onclick", "clicked(this)");
             }
         }
 
+        //리스트 클릭하기
         function clicked(el){
             let getLiIndex = el.getAttribute("data-index");
             musicIndex = getLiIndex;
