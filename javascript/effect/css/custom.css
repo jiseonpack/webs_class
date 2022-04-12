@@ -59,6 +59,15 @@ body.img12 {
 body.img13 {
     background-image: url(../img/img18.jpg);
 }
+body.img14 {
+    background-image: url(../img/img19.jpg);
+}
+body.img15 {
+    background-image: url(../img/vimg04.png);
+}
+body.img16 {
+    background-image: url(../img/vimg01.png);
+}
 img {
     width: 100%;
     vertical-align: top; /* 이미지 여백 제거 */
